@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import logo from "../../public/Assets/main_logo.png";
+import logo from "../../public/Assets/main_logo_b.png";
 import { FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import {motion, AnimatePresence} from "framer-motion";
 
@@ -11,6 +11,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const [headerState, setHeaderState] = useState("default");
+  const [isMobile, setIsMobile] = useState(false);
 
   const navLinks = [
     { name: "HOME", href: "/" },
@@ -21,38 +23,70 @@ export default function Header() {
   ];
 
 
-
-  // Detecting scroll
+// Detecting scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  let lastScrollY = window.scrollY;
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY < 50){
+      setHeaderState("default");
+    }
+    else {
+      if (currentScrollY > lastScrollY) {
+        setHeaderState("hidden");
+      } else {
+        setHeaderState("visible");
+      }
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+// Mobile view detection
+useEffect(() => {
+  const checkMobile = () => setIsMobile (window.innerWidth < 360);
+  checkMobile;
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
+
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 bg-red-800/15 backdrop-blur-md ease-in-out transition-shadow duration-500  ${ scrolled ? "shadow-md" : ""
-      }`}
+      className={`fixed top-0 w-full z-50 ease-in-out transition-all duration-500
+        ${headerState === "hidden" ? "-translate-y-full" : "translate-y-0"} 
+        ${headerState === "visible" || isMobile ? "bg-white/60 backdrop-blur-md" : ""}
+      `}
     >
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-
+      <div
+        className={`max-w-7xl mx-auto px-6 py-3 flex items-center transition-all duration-500 
+          ${headerState === "default" ? "justify-end md:justify-center my-6" : "justify-between"}
+        `}
+      >
         {/* --------Logo--------------  */}
-        <Link href="/">
-          <div className="relative h-[12vh] w-[120px] md:w-[150px]">
-            <Image
-              src={logo}
-              alt="Rangiri Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </Link>
+        {headerState !== "default" || isMobile ? (
+          <Link href="/">
+            <div className="relative h-[12vh] w-[120px] md:w-[150px]">
+              <Image
+                src={logo}
+                alt="Rangiri Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </Link>
+        ) : null}
 
         {/*------Desktop Navigation------*/}
-        <nav className="hidden md:flex space-x-15 text-md font-semibold">
+        <nav className="hidden md:flex space-x-8 text-lg font-semibold">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
@@ -60,23 +94,28 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative pl-5 font-medium transition ${isActive ? "text-red-800" : "text-black hover:text-red-800"}
-                  `}
+                className={`relative pl-5 font-medium transition duration-300
+                  ${
+                    headerState === "default"
+                      ? isActive
+                        ? "text-amber-100"
+                        : "text-white hover:text-amber-100"
+                      : isActive
+                      ? "text-red-800"
+                      : "text-black hover:text-red-800"
+                  }
+                `}
               >
-                {/* Dot for active OR hover */}
-                <span
-                  className={`absolute left-0 top-1/3 -translate-y-1/2 text-red-800 text-3xl transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-                >
-                  •
-                </span>
                 {link.name}
               </Link>
+
             );
           })}
         </nav>
 
         {/* -------Social Media Incons (desktop)------- */}
-        <div className="hidden md:flex space-x-3 ml-6">
+        {headerState !== "default" && (
+          <div className="hidden md:flex space-x-3 ml-6">
           <a
             href="#"
             target="_blank"
@@ -103,6 +142,8 @@ export default function Header() {
           </a>
         </div>
 
+        )}
+        
         {/* Mobile Hamburger */}
         <button
           className="md:hidden text-2xl text-gray-800"
