@@ -66,7 +66,7 @@ useEffect(() => {
       `}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 py-3 flex items-center transition-all duration-500 
+        className={`max-w-7xl mx-auto px-6 py-0.5 flex items-center transition-all duration-500 
           ${headerState === "default" ? "justify-end md:justify-center my-6" : "justify-between"}
         `}
       >
