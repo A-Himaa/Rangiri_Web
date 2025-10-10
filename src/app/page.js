@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import logo from "../../public/Assets/main_logo.png";
 import sec2image from "../../public/Assets/home_sec2_bg.jpg";
 import sec3image from "../../public/Assets/home_sec3_bg.png";
-import arrow from "../../public/Assets/arrow.png"
+import sec4image from "../../public/Assets/home_sec4_bg.jpg";
+import arrow from "../../public/Assets/arrow.png";
 // import styles from "./page.module.css";
 
 export default function Home() {
@@ -101,7 +102,12 @@ export default function Home() {
       </motion.section> 
 
       {/* THIRD SECTION */}
-      <section className="relative -mt-10 z-10 px-8 md:px-38">
+      <motion.section 
+            className="relative -mt-10 z-10 px-8 md:px-38"
+            initial={{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
+            viewport={{once: false, amount: 0.5}}>
       <div className="relative grid grid-cols-1 md:grid-cols-2 bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
 
       {/* Left content */}
@@ -118,29 +124,53 @@ export default function Home() {
       </p>
     </div>
   </div>
-</section>
+      </motion.section>
 
+      {/* FORTH SECTION */}
       <section>
-        <div className="relative -mt-30 h-[98vh] ">
+        <div className="relative -mt-48 h-[98vh] ">
           <Image
             src={sec3image}
             alt="section3 background"
             fill
             className="object-cover object-center opacity-15"
           />
-          <div className="absolute z-10 mt-50 px-40 text-center ">
-            <h1 className="text-4xl text-red-900 font-bold">Rangiri Holdings (PVT) Ltd.</h1>
-            <h3 className="text-2xl text-orange-900 font-bold opacity-90 py-3">Building a legacy of growth, innovation, and sustainability in Sri Lanka.</h3>
-            <p className="text-lg font-semi-bold text-justify pt-5 text-gray-700">The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.</p>
-            <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.</p>
-            <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.</p>
-            <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.</p>
+          <div className="absolute z-10 mt-60 px-40 text-center ">
+
+            <motion.h1 
+              className="text-4xl text-red-900 font-bold"
+              initial= {{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+              viewport={{once: true, amount: 0.4}}>
+              Rangiri Holdings (PVT) Ltd.
+            </motion.h1>
+
+            <motion.h3 
+              className="text-2xl text-orange-900 font-bold opacity-90 py-3"
+              initial= {{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+              viewport={{once: true, amount: 0.4}}>
+                Building a legacy of growth, innovation, and sustainability in Sri Lanka.
+              </motion.h3>
+
+            <motion.div
+              initial= {{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+              viewport={{once: true, amount: 0.4}}>
+                <p className="text-lg font-semi-bold text-justify pt-5 text-gray-700">The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.</p>
+                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.</p>
+                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.</p>
+                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.</p>
+            </motion.div>
           </div>
         </div>
 
         {/* Read More Button */}
         <div className="flex items-center justify-center">
-          <button className="-mt-7 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transition">
+          <button className="-mt-7 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
               Read more
           <Image 
             src={arrow}
@@ -148,10 +178,30 @@ export default function Home() {
             className="w-5 h-5 object-contain"
           />
           </button>
-        </div>
-
-        
+        </div>  
       </section>
+
+      {/* FIFTH SECTION */}
+      <section>
+        <div className="relative -mt-6">
+          <Image 
+            src={sec4image}
+            alt="Section 4"
+            className="object-cover object-center opacity-12"/>
+
+            <div className="absolute inset-0 flex flex-col mt-17 text-center ">
+              <div className="flex items-center w-full justify-center gap-6 px-8 ">
+                <hr className="w-1/3 border-t-2 border-gray-300" />
+                <h1 className="text-4xl font-bold text-gray-700 tracking-wide uppercase">Our Sectors</h1>
+                <hr className="w-1/3 border-t-2 border-gray-300" />
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+
+
 
     </>
   );
