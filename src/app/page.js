@@ -1,16 +1,86 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 import logo from "../../public/Assets/main_logo.png";
 import sec2image from "../../public/Assets/home_sec2_bg.jpg";
 import sec3image from "../../public/Assets/home_sec3_bg.png";
 import sec4image from "../../public/Assets/home_sec4_bg.jpg";
+import sec5image from "../../public/Assets/home_bg_sec5.png";
+import apparel from "../../public/Assets/Cards1/apparel.jpeg";
+import leisure from "../../public/Assets/Cards1/leisure.jpg";
+import learning from "../../public/Assets/Cards1/learning.jpg";
+import living from "../../public/Assets/Cards2/livinco.jpg";
+import media from "../../public/Assets/Cards1/media.jpg";
+import health from "../../public/Assets/Cards1/health.jpg";
 import arrow from "../../public/Assets/arrow.png";
+import st from "../../public/Assets/Cards2/stretchTec.jpg";
+import ra from "../../public/Assets/Cards2/rangiriAqua.jpg";
+import sh from "../../public/Assets/Cards2/synergy.jpeg";
+import pl from "../../public/Assets/Cards2/pulse.png";
+import lv from "../../public/Assets/Cards2/livinco.jpg";
+import dm from "../../public/Assets/Cards2/drugMart.jpg";
 // import styles from "./page.module.css";
 
 export default function Home() {
+  // Scrolling
    const [offsetY, setOffsetY] = useState(0);
+   const scrollRef = useRef(null);
+
+  //  Counting Section
+   const stats = [
+    { value: 20, label1: "Corporate", label2: "Clients", suffix: "+" },
+    { value: 400, label1: "Training", label2: "Programs", suffix: "+" },
+    { value: 15000, label1: "Individuals", label2: "Trained", suffix: "+" },
+    { value: 30, label1: "CSR", label2: "Projects", suffix: "+" },
+  ];
+
+  //  Description for Cards
+   const cards = [
+    {
+      src: st,
+      title: "Stretch Tech",
+      desc: "Stretch Tech stands at the forefront of innovation, specializing in both elastic and non-elastic looming to deliver precision, strength, and quality in every weave."
+    },
+    {
+      src: ra,
+      title: "Rangiri Aqua Edutainment Academy",
+      desc: "Rangiri Aqua is a serene lakeside destination offering edutainment, adventure, and relaxation under the Rangiri Holdings umbrella."
+    },
+    {
+      src: sh,
+      title: "Synergy of Heart & Soul",
+      desc: "A community initiative uplifting underprivileged and intellectually disabled children through care, inclusion, and research."
+    },
+    {
+      src: pl,
+      title: "Pulse Media Corporation (Pvt) Ltd",
+      desc: "A dynamic media platform by Rangiri Holdings, delivering engaging educational and entertainment content that inspires and informs audiences across Sri Lanka."
+    },
+    {
+      src: lv,
+      title: "Livinco Construction",
+      desc: "Livinco has developed quality residential and commercial spaces, including Rangiri Resort Hotel & Spa, combining comfort, style, and modern living."
+    },
+    {
+      src: dm,
+      title: "Drug Mart",
+      desc: "A trusted pharmaceutical and wellness retailer dedicated to providing quality medicines, healthcare products, and professional service for healthier communities."
+    },
+  ];
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const scrollAmount = clientWidth * 0.8;
+      scrollRef.current.scrollTo({
+        left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
    useEffect(() => {
      const handleScroll = () => setOffsetY (window.scrollY);
@@ -182,23 +252,235 @@ export default function Home() {
       </section>
 
       {/* FIFTH SECTION */}
-      <section>
-        <div className="relative -mt-6">
-          <Image 
-            src={sec4image}
-            alt="Section 4"
-            className="object-cover object-center opacity-12"/>
+      <section className="relative -mt-6">
+        {/* Background image */}
+        <Image
+          src={sec4image}
+          alt="Section 4"
+          className="object-cover object-center w-full h-[90vh] opacity-10"
+        />
 
-            <div className="absolute inset-0 flex flex-col mt-17 text-center ">
-              <div className="flex items-center w-full justify-center gap-6 px-8 ">
-                <hr className="w-1/3 border-t-2 border-gray-300" />
-                <h1 className="text-4xl font-bold text-gray-700 tracking-wide uppercase">Our Sectors</h1>
-                <hr className="w-1/3 border-t-2 border-gray-300" />
+        {/* Overlay container */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-12 px-6">
+          
+          {/* Title */}
+          <div className="flex items-center w-full justify-center gap-6 px-8">
+            <hr className="w-1/4 border-t-2 border-gray-300" />
+            <h1 className="text-4xl font-bold text-gray-600 tracking-wide uppercase">
+              Our Sectors
+            </h1>
+            <hr className="w-1/4 border-t-2 border-gray-300" />
+          </div>
+
+          {/* Cards Section */}
+          <div className="space-y-5">
+            {/* Row 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl opacity-90">
+              {/* Card 1 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+                <Image src={apparel} alt="Apparel" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Garment & Apparel</h2>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+                <Image src={leisure} alt="Leisure" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Leisure & Relaxation</h2>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+                <Image src={learning} alt="Learning" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Learning & Development</h2>
+                </div>
               </div>
             </div>
 
+            {/* Row 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
+              {/* Card 4 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <Image src={living} alt="Living" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Living Solutions</h2>
+                </div>
+              </div>
+
+              {/* Card 5 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <Image src={media} alt="Media" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Media & Printing</h2>
+                </div>
+              </div>
+
+              {/* Card 6 */}
+              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+                <Image src={health} alt="Health" className="w-full h-48 object-cover" />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+                  <h2 className="text-2xl font-bold">Health Care</h2>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* SIXTH SECTION */}
+      <section className="relative">
+      
+       <Image 
+          src={sec4image}
+          alt="Section 4"
+          className="object-cover object-center w-full opacity-8 mt-40 h-[85vh]"
+          style={{ transform: 'rotate(180deg)' }}
+        />
+
+      <div className="absolute inset-0 -mt-45 px-55">
+      {/* Heading */}
+      <div className="flex items-center justify-center gap-6 mb-8">
+        <hr className="w-1/4 border-t-2 border-gray-300" />
+        <h1 className="text-4xl font-bold text-gray-600 tracking-wide uppercase">Our Strength</h1>
+        <hr className="w-1/4 border-t-2 border-gray-300" />
+      </div>
+
+      {/* Paragraph */}
+      <p className="text-center text-gray-500 text-lg mb-15 px-10">
+        “ Our diversified group is built on trust, innovation, and excellence, bringing together businesses across multiple industries to create sustainable value for communities and partners. “
+      </p>
+
+      {/* Carousel */}
+      <div className="relative">
+        {/* Left button */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute -left-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+        >
+          <FaChevronLeft size={22} />
+        </button>
+
+        {/* Cards container */}
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-6 pb-5"
+        >
+          {cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <Image
+                src={card.src}
+                alt={card.title}
+                className="w-full h-50 object-cover opacity-90"
+              />
+              <div className="p-5 text-center no-scrollbar">
+                <h2 className="text-2xl font-bold text-gray-700 mb-2">{card.title}</h2>
+                <p className="text-gray-600 text-sm md:text-lg">{card.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right button */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute -right-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+        >
+          <FaChevronRight size={22} />
+        </button>
+      </div>
+
+    
+    </div>
+      </section>
+
+      {/* Counting Section */}
+      <section 
+        className="relative h-[80vh] flex items-center justify-center text-white">
+      
+      <Image
+        src={sec5image}
+        alt="Our Impact"
+        fill
+        className="object-cover object-center opacity-70"
+        priority
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl w-full px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        {/* Left Text */}
+        <div className="flex flex-col justify-center">
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-wide">
+            OUR <br /> IMPACT IN <br /> NUMBERS
+          </h2>
+        </div>
+
+        {/* Right Stats */}
+        <div className="grid grid-cols-2 gap-6">
+          {stats.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
+              className="border-5 border-white flex flex-col items-center justify-center py-8 px-4 bg-black/30 backdrop-blur-sm"
+            >
+              <h3 className="text-4xl font-bold mb-2">
+                <CountUp
+                  end={item.value}
+                  duration={2}
+                  suffix={item.suffix}
+                  enableScrollSpy
+                />
+              </h3>
+              <p className="text-center text-sm md:text-xl font-medium">
+                {item.label1} <br /> {item.label2}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    
+    <motion.section 
+            className="relative -mt-10 z-10 px-8 md:px-38"
+            initial={{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
+            viewport={{once: false, amount: 0.5}}>
+      <div className="relative bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
+
+      <div className="p-15 flex items-center">
+        <p className="text-gray-500 font-bold text-xl text-center tracking-wide">
+          By 2030, our mission  is to design and carry out road maps that support Rangiri Holdings' objective of expanding its business portfolio while protecting sustainability and national interests
+        </p>
+      </div>
+
+  </div>
+      </motion.section>
+
+
+
+
+
 
 
 
