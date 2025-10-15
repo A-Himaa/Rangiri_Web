@@ -22,7 +22,9 @@ import sh from "../../public/Assets/Cards2/synergy.jpeg";
 import pl from "../../public/Assets/Cards2/pulse.png";
 import lv from "../../public/Assets/Cards2/livinco.jpg";
 import dm from "../../public/Assets/Cards2/drugMart.jpg";
-// import styles from "./page.module.css";
+import icon1 from "../../public/Assets/sustainability.png";
+import icon2 from "../../public/Assets/social-justice.png";
+import icon3 from "../../public/Assets/eco-world.png";
 
 export default function Home() {
   // Scrolling
@@ -71,10 +73,25 @@ export default function Home() {
     },
   ];
 
+  const items = [
+    {
+      img: icon1,
+      desc: "Driving prosperity that benefits businesses, people, and communities alike."
+    },
+    {
+      img: icon2,
+      desc: "Placing human values, inclusive, and care at the core of everything we do."
+    },
+    {
+      img: icon3,
+      desc: "Championing sustainability through mindful use of resources and reduced environmental impact."
+    }
+  ];
+
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollAmount = clientWidth * 0.8;
+      const scrollAmount = clientWidth * 0.6;
       scrollRef.current.scrollTo({
         left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
         behavior: "smooth",
@@ -173,7 +190,7 @@ export default function Home() {
 
       {/* THIRD SECTION */}
       <motion.section 
-            className="relative -mt-10 z-10 px-8 md:px-38"
+            className="relative -mt-4 md:-mt-10 z-10 px-8 md:px-38"
             initial={{opacity: 0, y: 20}}
             whileInView={{opacity: 1, y: 0}}
             transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
@@ -181,34 +198,34 @@ export default function Home() {
       <div className="relative grid grid-cols-1 md:grid-cols-2 bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
 
       {/* Left content */}
-      <div className="p-15 flex items-center">
+      <div className="px-5 pt-5 md:p-15 flex items-center">
         <p className="text-gray-600 font-bold text-3xl leading-wide">
           The Mission can't be claimed as a single loop. It's a collaboration of many loops.
         </p>
       </div>
 
-    {/* Right content */}
-    <div className="p-15 flex items-center">
-      <p className="text-gray-500 font-semi-bold text-lg text-justify tracking-wide">
-        Our Mission is to satisfy all our customers by providing over & above their requirements profitably, but with products of superior quality, services and competitive prices for them to progress with the global competition.
-      </p>
-    </div>
+      {/* Right content */}
+      <div className="p-5 md:p-15 flex items-center">
+        <p className="text-gray-500 font-semi-bold text-lg text-justify tracking-wide">
+          Our Mission is to satisfy all our customers by providing over & above their requirements profitably, but with products of superior quality, services and competitive prices for them to progress with the global competition.
+        </p>
+      </div>
   </div>
       </motion.section>
 
       {/* FORTH SECTION */}
       <section>
-        <div className="relative -mt-48 h-[98vh] ">
+        <div className="relative -mt-48 h-[120vh] md:h-[98vh] ">
           <Image
             src={sec3image}
             alt="section3 background"
             fill
-            className="object-cover object-center opacity-15"
+            className="object-cover object-center opacity-15 overflow-hidden"
           />
-          <div className="absolute z-10 mt-60 px-40 text-center ">
+          <div className="absolute z-10 mt-60 px-5 md:px-40 text-center ">
 
             <motion.h1 
-              className="text-4xl text-red-900 font-bold"
+              className="text-2xl md:text-4xl text-red-900 font-bold"
               initial= {{opacity: 0, y: 20}}
               whileInView={{opacity: 1, y: 0}}
               transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
@@ -217,7 +234,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.h3 
-              className="text-2xl text-orange-900 font-bold opacity-90 py-3"
+              className="text-lg md:text-2xl text-orange-900 font-semi-bold md:font-bold opacity-90 md:py-3"
               initial= {{opacity: 0, y: 20}}
               whileInView={{opacity: 1, y: 0}}
               transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
@@ -230,17 +247,17 @@ export default function Home() {
               whileInView={{opacity: 1, y: 0}}
               transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
               viewport={{once: true, amount: 0.4}}>
-                <p className="text-lg font-semi-bold text-justify pt-5 text-gray-700">The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.</p>
-                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.</p>
-                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.</p>
-                <p className="text-lg font-semi-bold text-justify pt-2 text-gray-700">With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.</p>
+                <p className="text-sm md:text-lg font-semi-bold text-justify pt-5 text-gray-700">The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.</p>
+                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.</p>
+                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.</p>
+                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.</p>
             </motion.div>
           </div>
         </div>
 
         {/* Read More Button */}
         <div className="flex items-center justify-center">
-          <button className="-mt-7 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
+          <button className="-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
               Read more
           <Image 
             src={arrow}
@@ -252,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* FIFTH SECTION */}
-      <section className="relative -mt-6">
+      <section className="relative md:-mt-6">
         {/* Background image */}
         <Image
           src={sec4image}
@@ -261,15 +278,15 @@ export default function Home() {
         />
 
         {/* Overlay container */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center space-y-12 px-6">
+        <div className="absolute md:absolute inset-0 flex flex-col items-center justify-center md:space-y-12 px-6">
           
           {/* Title */}
-          <div className="flex items-center w-full justify-center gap-6 px-8">
-            <hr className="w-1/4 border-t-2 border-gray-300" />
-            <h1 className="text-4xl font-bold text-gray-600 tracking-wide uppercase">
+          <div className="flex items-center w-full justify-center gap-6 md:px-8 text-center">
+            <hr className="w-1/4 md:border-t-2 border-gray-300" />
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase">
               Our Sectors
             </h1>
-            <hr className="w-1/4 border-t-2 border-gray-300" />
+            <hr className="w-1/4 md:border-t-2 border-gray-300" />
           </div>
 
           {/* Cards Section */}
@@ -277,7 +294,7 @@ export default function Home() {
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl opacity-90">
               {/* Card 1 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
                 <Image src={apparel} alt="Apparel" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -286,7 +303,7 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
                 <Image src={leisure} alt="Leisure" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -295,7 +312,7 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
                 <Image src={learning} alt="Learning" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -307,7 +324,7 @@ export default function Home() {
             {/* Row 2 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
               {/* Card 4 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
                 <Image src={living} alt="Living" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -316,7 +333,7 @@ export default function Home() {
               </div>
 
               {/* Card 5 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
                 <Image src={media} alt="Media" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -325,7 +342,7 @@ export default function Home() {
               </div>
 
               {/* Card 6 */}
-              <div className="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
                 <Image src={health} alt="Health" className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
@@ -347,7 +364,7 @@ export default function Home() {
           style={{ transform: 'rotate(180deg)' }}
         />
 
-      <div className="absolute inset-0 -mt-45 px-55">
+      <div className="absolute inset-0 -mt-45 px-5 md:px-55">
       {/* Heading */}
       <div className="flex items-center justify-center gap-6 mb-8">
         <hr className="w-1/4 border-t-2 border-gray-300" />
@@ -365,7 +382,7 @@ export default function Home() {
         {/* Left button */}
         <button
           onClick={() => scroll("left")}
-          className="absolute -left-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+          className="absolute md:-left-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
         >
           <FaChevronLeft size={22} />
         </button>
@@ -396,7 +413,7 @@ export default function Home() {
         {/* Right button */}
         <button
           onClick={() => scroll("right")}
-          className="absolute -right-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+          className="absolute right-0 md:-right-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
         >
           <FaChevronRight size={22} />
         </button>
@@ -422,7 +439,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl w-full px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="relative z-10 max-w-6xl w-full md:px-12 px-5 grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-5">
         
         {/* Left Text */}
         <div className="flex flex-col justify-center">
@@ -457,7 +474,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </section>
+      </section>
 
     
     <motion.section 
@@ -475,7 +492,39 @@ export default function Home() {
       </div>
 
   </div>
-      </motion.section>
+    </motion.section>
+
+
+    {/* Final Section */}
+    <motion.section 
+      className="py-20 px-10 bg-gray-50 mt-10"
+      initial={{opacity: 0, y: 20}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
+      viewport={{once: false, amount: 0.5}}>
+
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="bg-transparent overflow-hidden "
+            >
+              <Image
+                src={item.img}
+                alt="icons"
+                className="w-30 mx-auto"
+              />
+              <div className="p-6 text-center">
+                <p className="text-gray-600 text-center leading-relaxed text-lg">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
 
 
 

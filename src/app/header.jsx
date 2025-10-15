@@ -13,27 +13,32 @@ export default function Header() {
   const pathname = usePathname();
   const [headerState, setHeaderState] = useState("default");
   const [isMobile, setIsMobile] = useState(false);
+  const isHomePage = pathname === "/";
+
 
   const navLinks = [
     { name: "HOME", href: "/" },
-    { name: "COMPANIES", href: "#" },
+    { name: "COMPANIES", href: "/companies" },
     { name: "ABOUT US", href: "#" },
     { name: "CSR", href: "#" },
     { name: "CONTACT", href: "#" },
   ];
 
-
 // Detecting scroll
   useEffect(() => {
+  if (!isHomePage) {
+    setHeaderState("visible");
+    return;
+  }
+
   let lastScrollY = window.scrollY;
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY < 50){
+    if (currentScrollY < 50) {
       setHeaderState("default");
-    }
-    else {
+    } else {
       if (currentScrollY > lastScrollY) {
         setHeaderState("hidden");
       } else {
@@ -46,7 +51,8 @@ export default function Header() {
 
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+}, [isHomePage]);
+
 
 // Mobile view detection
 useEffect(() => {
@@ -62,7 +68,7 @@ useEffect(() => {
     <header
       className={`fixed top-0 w-full z-50 ease-in-out transition-all duration-500
         ${headerState === "hidden" ? "-translate-y-full" : "translate-y-0"} 
-        ${headerState === "visible" || isMobile ? "bg-white/60 backdrop-blur-md" : ""}
+        ${headerState === "visible" || isMobile ? "bg-white/60 backdrop-blur-md shadow-lg" : ""}
       `}
     >
       <div
