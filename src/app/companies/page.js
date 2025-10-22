@@ -34,14 +34,13 @@ export default function Companies() {
     <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
 
     {/* Text */}
-    <div className="relative z-10 text-5xl font-bold text-white pt-35 pl-20">
+    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-30 md:pt-35 pl-20">
       Our Companies
     </div>
   </main>
 
   {/* Section 2 */}
-  <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
-  
+  <section className="relative h-auto md:h-[70vh] w-full flex items-center justify-center overflow-hidden py-12 md:py-0">
     <Image 
       src={sec2img}
       alt="Section background"
@@ -50,16 +49,18 @@ export default function Companies() {
       priority
     />
 
+    {/* Overlay */}
     <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-30" />
 
+    {/* Content */}
     <motion.div
-      className="relative z-10 text-white px-6 md:px-35 text-center"
+      className="relative z-10 text-white px-4 sm:px-8 md:px-35 text-center"
       initial={{ opacity: 0, y: 30 }}      
       animate={{ opacity: 1, y: 0 }}       
       transition={{ duration: 1, ease: "easeOut" }} 
     >
       <motion.h1
-        className="text-3xl md:text-5xl font-semibold mb-15 text-red-900 -mt-10"
+        className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-8 md:mb-15 text-red-900 mt-[-20px] md:-mt-10"
         initial={{ scale: 1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
@@ -68,26 +69,34 @@ export default function Companies() {
       </motion.h1>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-15 items-center"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-15 items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
+        {/* Logo */}
         <motion.div
-          className="flex justify-center"
+          className="flex justify-center md:justify-center mb-6 md:mb-0"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-          <Image src={logo} alt="Company logo" width={330} height="auto" />
+          <Image 
+            src={logo} 
+            alt="Company logo" 
+            width={230} 
+            height="auto" 
+            className="w-[220px] sm:w-[260px] md:w-[330px] h-auto"
+          />
         </motion.div>
 
+        {/* Text */}
         <motion.div
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          <p className="text-semi-bold md:text-xl leading-loose tracking-wide text-gray-800 text-justify">
+          <p className="text-sm sm:text-base md:text-xl leading-relaxed md:leading-loose tracking-wide text-gray-800 text-justify px-2 sm:px-4 md:px-0">
             The name “Rangiri” has grown to represent trust, progress, and shared purpose across Sri Lanka, 
             touching lives beyond boundaries. More than a business, we have become a symbol of opportunity—creating 
             livelihoods, empowering communities, and inspiring hope for those striving for a brighter tomorrow. 
@@ -100,13 +109,13 @@ export default function Companies() {
   </section>
 
   <div className="flex items-center justify-center">
-    <button className="-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
-        Read more
-      <Image 
-        src={arrow}
-        alt="arrow icon"
-        className="w-5 h-5 object-contain"
-      />
+    <button className="-mt-4 md:-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-lg md:text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
+      Read more
+    <Image 
+      src={arrow}
+      alt="arrow icon"
+      className="w-5 h-5 object-contain"
+    />
     </button>
   </div> 
 

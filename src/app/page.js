@@ -215,14 +215,14 @@ export default function Home() {
 
       {/* FORTH SECTION */}
       <section>
-        <div className="relative -mt-48 h-[120vh] md:h-[98vh] ">
+        <div className="relative -mt-48 h-[160vh] md:h-[98vh] ">
           <Image
             src={sec3image}
             alt="section3 background"
             fill
             className="object-cover object-center opacity-15 overflow-hidden"
           />
-          <div className="absolute z-10 mt-60 px-5 md:px-40 text-center ">
+          <div className="absolute z-10 mt-60 px-8 md:px-40 text-center ">
 
             <motion.h1 
               className="text-2xl md:text-4xl text-red-900 font-bold"
@@ -257,7 +257,7 @@ export default function Home() {
 
         {/* Read More Button */}
         <div className="flex items-center justify-center">
-          <button className="-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
+          <button className="-mt-4 md:-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-lg md:text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
               Read more
           <Image 
             src={arrow}
@@ -269,7 +269,7 @@ export default function Home() {
       </section>
 
       {/* FIFTH SECTION */}
-      <section className="relative md:-mt-6">
+      <section className="relative md:-mt-6 mt-10">
         {/* Background image */}
         <Image
           src={sec4image}
@@ -283,7 +283,7 @@ export default function Home() {
           {/* Title */}
           <div className="flex items-center w-full justify-center gap-6 md:px-8 text-center">
             <hr className="w-1/4 md:border-t-2 border-gray-300" />
-            <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase mb-3">
               Our Sectors
             </h1>
             <hr className="w-1/4 md:border-t-2 border-gray-300" />
@@ -360,15 +360,15 @@ export default function Home() {
        <Image 
           src={sec4image}
           alt="Section 4"
-          className="object-cover object-center w-full opacity-8 mt-40 h-[85vh]"
+          className="object-cover object-center w-full opacity-8 mt-20 h-[85vh]"
           style={{ transform: 'rotate(180deg)' }}
         />
 
-      <div className="absolute inset-0 -mt-45 px-5 md:px-55">
+      <div className="absolute inset-0 md:-mt-45 px-5 md:px-55">
       {/* Heading */}
-      <div className="flex items-center justify-center gap-6 mb-8">
+      <div className="flex items-center justify-center gap-6 mb-8 text-center md:mt-20 ">
         <hr className="w-1/4 border-t-2 border-gray-300" />
-        <h1 className="text-4xl font-bold text-gray-600 tracking-wide uppercase">Our Strength</h1>
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase">Our Strength</h1>
         <hr className="w-1/4 border-t-2 border-gray-300" />
       </div>
 
@@ -425,7 +425,7 @@ export default function Home() {
 
       {/* Counting Section */}
       <section 
-        className="relative h-[80vh] flex items-center justify-center text-white">
+        className="relative h-[80vh] flex items-center justify-center text-white mt-58 md:mt-0">
       
       <Image
         src={sec5image}
@@ -443,7 +443,7 @@ export default function Home() {
         
         {/* Left Text */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight tracking-wide">
+          <h2 className="text-3xl md:text-6xl font-bold leading-tight tracking-wide text-center">
             OUR <br /> IMPACT IN <br /> NUMBERS
           </h2>
         </div>
@@ -465,6 +465,7 @@ export default function Home() {
                   duration={2}
                   suffix={item.suffix}
                   enableScrollSpy
+                  scrollSpyOnce
                 />
               </h3>
               <p className="text-center text-sm md:text-xl font-medium">
@@ -476,8 +477,7 @@ export default function Home() {
       </div>
       </section>
 
-    
-    <motion.section 
+      <motion.section 
             className="relative -mt-10 z-10 px-8 md:px-38"
             initial={{opacity: 0, y: 20}}
             whileInView={{opacity: 1, y: 0}}
@@ -492,11 +492,10 @@ export default function Home() {
       </div>
 
   </div>
-    </motion.section>
+      </motion.section>
 
-
-    {/* Final Section */}
-    <motion.section 
+      {/* Final Section */}
+      <motion.section 
       className="py-20 px-10 bg-gray-50 mt-10"
       initial={{opacity: 0, y: 20}}
       whileInView={{opacity: 1, y: 0}}
@@ -513,10 +512,10 @@ export default function Home() {
               <Image
                 src={item.img}
                 alt="icons"
-                className="w-30 mx-auto"
+                className="w-15 md:w-30 mx-auto"
               />
               <div className="p-6 text-center">
-                <p className="text-gray-600 text-center leading-relaxed text-lg">
+                <p className="text-gray-600 text-center leading-relaxed md:text-lg">
                   {item.desc}
                 </p>
               </div>
@@ -524,7 +523,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </motion.section>
+      </motion.section>
 
 
 

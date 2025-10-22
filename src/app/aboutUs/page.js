@@ -13,11 +13,6 @@ import sustainabilityIcon from "../../../public/Assets/aboutUs/sustainability.pn
 import growthIcon from "../../../public/Assets/aboutUs/growth.png";
 
 export default function aboutUs() {
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
-
   return (
     <>
       {/* Section 1*/}
@@ -35,13 +30,13 @@ export default function aboutUs() {
         <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
 
         {/* Text */}
-        <div className="relative z-10 text-5xl font-bold text-white pt-35 pl-20">
+        <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-30 md:pt-35 pl-20">
           About Us
         </div>
       </main>
 
       {/* Section 2 */}
-      <section className="relative h-[88vh] w-full flex items-center justify-center overflow-hidden"> 
+      <section className="relative md:h-[88vh] w-full flex items-center justify-center overflow-hidden"> 
         <Image 
           src={sec2img}
           alt="Section background"
@@ -50,14 +45,9 @@ export default function aboutUs() {
           priority
         />
 
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="max-w-6xl mx-auto text-center"
+        <div className="max-w-6xl mx-auto text-center"
         >
-          <div className="flex flex-col items-center space-y-5">
+          <div className="flex flex-col items-center space-y-5 mt-20">
             <Image
               src={logo}
               alt="Rangiri Logo"
@@ -65,7 +55,7 @@ export default function aboutUs() {
               height={250}
               className="mb-10"
             />
-            <p className="text-gray-700 leading-relaxed text-justify text-lg">
+            <p className="text-gray-700 leading-relaxed text-justify text-sm md:text-lg px-8">
               Rangiri Holdings, cluster of entities, is concept of Mr. Nihal
               Pathirage. He made his mark in the city of Anuradhapura after his
               idea of life changing initiative. Evolving better from sports and
@@ -94,28 +84,28 @@ export default function aboutUs() {
               and concepts are vividly managed within the company culture.
             </p>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Section 3 */}
       <section className="py-12 bg-white text-center">
         <motion.h2
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          initial= {{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.4}}
           className="text-2xl md:text-4xl text-red-900 font-bold"
         >
           Our Mission & Vision
-        </motion.h2>
+      </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-6 px-65 py-20">
+        <div className="flex flex-col md:flex-row gap-6 px-8 md:px-65 py-20">
         {/* Mission */}
         <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          initial= {{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.4}}
           className="flex flex-col justify-between bg-white shadow-xl rounded-2xl p-8 w-full md:w-1/2 border border-gray-100"
         >
           <div>
@@ -135,10 +125,10 @@ export default function aboutUs() {
 
         {/* Vision */}
         <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          initial= {{opacity: 0, y: 20}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.4}}
           className="flex flex-col justify-between bg-white shadow-xl rounded-2xl p-8 w-full md:w-1/2 border border-gray-100"
         >
           <div>
@@ -173,10 +163,10 @@ export default function aboutUs() {
 
         <div className="relative z-10 max-w-7xl mx-auto text-center px-6 md:px-10">
           <motion.h2
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+            initial= {{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+            viewport={{once: true, amount: 0.4}}
             className="text-2xl md:text-4xl font-bold mb-12"
           >
             Our Values
@@ -207,10 +197,10 @@ export default function aboutUs() {
             ].map((value, idx) => (
               <motion.div
                 key={idx}
-                variants={fadeInUp}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
+                initial= {{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+                viewport={{once: true, amount: 0.4}}
                 className="bg-white/25 backdrop-blur-md rounded-2xl p-6 shadow-md hover:bg-white/20 transition"
               >
                 <Image
