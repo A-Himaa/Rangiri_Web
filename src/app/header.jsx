@@ -19,9 +19,9 @@ export default function Header() {
   const navLinks = [
     { name: "HOME", href: "/" },
     { name: "COMPANIES", href: "/companies" },
-    { name: "ABOUT US", href: "#" },
+    { name: "ABOUT US", href: "/aboutUs" },
     { name: "CSR", href: "#" },
-    { name: "CONTACT", href: "#" },
+    { name: "CONTACT", href: "/contact" },
   ];
 
 // Detecting scroll

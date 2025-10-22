@@ -11,6 +11,7 @@ import rmit from "../../../public/Assets/companies/rmit.png";
 import livinco from "../../../public/Assets/companies/livinco.png";
 import pulse from "../../../public/Assets/companies/pulse.png";
 import drugmart from "../../../public/Assets/companies/drugMart.png";
+import nishu from "../../../public/Assets/companies/nishu.png";
 import arrow from "../../../public/Assets/arrow.png";
 
 
@@ -335,13 +336,51 @@ export default function Companies() {
           </p>
         </div>
       </motion.div>
+
+      {/* --- Nishu --- */}
+      <motion.div 
+        className="grid md:grid-cols-2 items-center mb-20"
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 25, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        viewport={{once: true}}>
+
+        <div className="bg-gray-100 shadow-md p-8 border border-gray-200 h-[420px] order-2 md:order-1">
+          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+            Nishu Creation (Pvt) Ltd
+          </h2>
+          <p className="text-gray-700 leading-relaxed text-justify">
+            Nishu Creations is a technology-driven printing solutions provider specializing in RFID smart printing, 
+            barcode printing, and custom label production. We deliver innovative and affordable printing solutions 
+            designed to meet the evolving needs of modern businesses. With a focus on precision, durability, and smart 
+            technology integration, we provide end-to-end printing services that enhance product tracking, security, 
+            and brand presentation. Our advanced equipment and skilled team ensure every project meets the highest 
+            standards of quality and reliability. At Nishu Creations, we combine innovation, affordability, and 
+            excellence to help businesses print smarter, faster, and more efficiently.
+          </p>
+        </div>
+
+        {/* Image Right */}
+        <div className="overflow-hidden rounded-[0_50px_50px_0] shadow-lg order-1 md:order-2 mr-25">
+          <Image
+            src={nishu}
+            alt="Pulse TV"
+            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+          />
+        </div>
+      </motion.div>
     </section> 
 
+      
 
     {/* Section 4 */}
     {/* <div className="">
 
     </div> */}
+
+    
+
+
 
 
 
