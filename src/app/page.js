@@ -108,110 +108,105 @@ export default function Home() {
 
     return (
     <>
-      <main className="relative h-[20vh] md:min-h-screen overflow-hidden">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-[url('/Assets/home_bg_n.jpg')] bg-cover bg-center bg-no-repeat"
-          style={{
-            transform: `translateY(${offsetY * 0.4}px)`,
-          }}
-        ></div>
+    {/* FIRST SECTION */}
+    <main className="relative h-[20vh] md:min-h-screen overflow-hidden">
+    <div
+      className="absolute inset-0 bg-[url('/Assets/home_bg_n.jpg')] bg-cover bg-center bg-no-repeat"
+      style={{transform: `translateY(${offsetY * 0.4}px)`,}}></div>
 
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/20"></div>
+    <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Logo image */}
-        <div
-          className="absolute md:top-[400px] md:left-[250px] top-[25px] left-[30px]"
-          style={{
-            transform: `translateY(${offsetY * -0.2}px)`,
-          }}
-        >
+    <div
+      className="absolute md:top-[400px] md:left-[250px] top-[25px] left-[30px]"
+      style={{transform: `translateY(${offsetY * -0.2}px)`,}}>
           <Image
             src={logo}
-            alt="logo"
-            className="object-contain w-20 md:w-[300px]"
+            alt="Rangiri Logo"
+            className="object-contain w-20 md:w-[280px]"
           />
-        </div>
-      </main>
+    </div>
+    </main>
 
-      {/* ---- SECOND SECTION ---- */}
-      <motion.section 
-          className="relative bg-stone-900"
+    {/* ---- SECOND SECTION ---- */}
+    <motion.section 
+      className="relative bg-stone-900"
+      initial= {{opacity: 0, y: 0}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay:0.2, duration: 1, ease: "easeOut"}}
+      viewport={{once: true, amount: 0.01}}
+      style={{transform: `translateY(${offsetY * -0.2}px)`}}>
+
+     <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-[1.4fr_1fr] gap-0 items-center">
+        
+    {/* Image - left */}
+    <div className="flex justify-start">
+        <Image
+          src={sec2image}
+          alt="Growth"
+          className="md:w-[75vw] md:h-[120vh] object-cover"
+        />
+      </div>
+    {/* Content - right */}
+    <div className="space-y-2 px-8 py-8 md:px-38">
+        <motion.p 
+          className="text-md md:text-lg text-amber-300/85 tracking-widest" 
           initial= {{opacity: 0, y: 0}}
           whileInView={{opacity: 1, y: 0}}
-          transition={{delay:0.2, duration: 1, ease: "easeOut"}}
-          viewport={{once: true, amount: 0.01}}
-          style={{transform: `translateY(${offsetY * -0.2}px)`}}>
+          transition={{delay:0.5, duration: 1, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.2}}>
+            LET'S WORK TOGETHER
+        </motion.p>
+ 
+        <motion.h1 
+          className="text-2xl md:text-4xl text-white font-bold tracking-normal py-5 md:py-10 leading-13"
+          initial= {{opacity: 0, y: 0}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay:0.5, duration: 1, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.4}} >
+            The Vision is not anymore a full of expectation
+        </motion.h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-[1.4fr_1fr] gap-0 items-center">
+        <motion.p 
+          className="text-gray-400 text-md md:text-xl text-justify leading-11"
+          initial= {{opacity: 0, y: 0}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
+          viewport={{once: true, amount: 0.3}} >
+            Our vision is to be the leading Sri Lankan holding company, securing its interests as a preferred partner for institutional investors in the private and public sectors, as well as multinational corporations, to standardize the efficacy and profitability of the businesses in which Rangiri Holdings has a stake.
+        </motion.p>
           
-          {/* Image - left */}
-          <div className="flex justify-start">
-            <Image
-              src={sec2image}
-              alt="Section 2"
-              className="md:w-[75vw] md:h-[120vh] object-cover"
-            />
-          </div>
-
-          {/* Content - right */}
-          <div className="space-y-2 md:space-y-4 px-8 py-8 md:px-38">
-            <motion.p 
-              className="text-m md:text-lg font-semi-bold text-amber-300/85 tracking-widest" 
-              initial= {{opacity: 0, y: 0}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.5, duration: 1, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.2}}>
-                LET'S WORK TOGETHER
-            </motion.p>
-
-            <motion.h1 
-              className="text-4xl md:text-5xl text-white font-bold tracking-normal py-5 md:py-10 leading-13"
-              initial= {{opacity: 0, y: 0}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.5, duration: 1, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.4}} >
-                The Vision is not anymore a full of expectation
-            </motion.h1>
-
-            <motion.p 
-              className="text-gray-400 text-xl font-semi-bold text-justify leading-11"
-              initial= {{opacity: 0, y: 0}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.3}} >
-                Our vision is to be the leading Sri Lankan holding company, securing its interests as a preferred partner for institutional investors in the private and public sectors, as well as multinational corporations, to standardize the efficacy and profitability of the businesses in which Rangiri Holdings has a stake.
-            </motion.p>
-          
-          </div>
-        </div>
-      </motion.section> 
-
-      {/* THIRD SECTION */}
-      <motion.section 
-            className="relative -mt-4 md:-mt-10 z-10 px-8 md:px-38"
-            initial={{opacity: 0, y: 20}}
-            whileInView={{opacity: 1, y: 0}}
-            transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
-            viewport={{once: false, amount: 0.5}}>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
-
-      {/* Left content */}
-      <div className="px-5 pt-5 md:p-15 flex items-center">
-        <p className="text-gray-600 font-bold text-3xl leading-wide">
-          The Mission can't be claimed as a single loop. It's a collaboration of many loops.
-        </p>
       </div>
+    </div>
+    </motion.section> 
 
-      {/* Right content */}
-      <div className="p-5 md:p-15 flex items-center">
-        <p className="text-gray-500 font-semi-bold text-lg text-justify tracking-wide">
-          Our Mission is to satisfy all our customers by providing over & above their requirements profitably, but with products of superior quality, services and competitive prices for them to progress with the global competition.
-        </p>
-      </div>
-  </div>
-      </motion.section>
+    {/* THIRD SECTION */}
+    <motion.section 
+      className="relative -mt-4 md:-mt-10 z-10 px-8 md:px-38"
+      initial={{opacity: 0, y: 20}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
+      viewport={{once: true, amount: 0.5}}>
+    <div className="relative grid grid-cols-1 md:grid-cols-2 bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
+
+    {/* Left content */}
+    <div className="px-6 pt-5 md:p-15 flex items-center">
+      <p className="text-gray-600 font-bold text-2xl md:text-3xl leading-wide">
+        The Mission can't be claimed as a single loop. It's a collaboration of many loops.
+      </p>
+    </div>
+
+    {/* Right content */}
+    <div className="p-5 md:p-15 flex items-center">
+      <p className="text-gray-500 font-semi-bold text-md md:text-lg text-justify tracking-wide">
+         Our Mission is to satisfy all our customers by providing over & above their requirements profitably, but with products of superior quality, services and competitive prices for them to progress with the global competition.
+      </p>
+    </div>
+    </div>
+    </motion.section>
+
+
+
+    
 
       {/* FORTH SECTION */}
       <section>

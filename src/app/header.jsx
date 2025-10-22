@@ -53,7 +53,6 @@ export default function Header() {
   return () => window.removeEventListener("scroll", handleScroll);
 }, [isHomePage]);
 
-
 // Mobile view detection
 useEffect(() => {
   const checkMobile = () => setIsMobile (window.innerWidth < 360);
@@ -61,8 +60,6 @@ useEffect(() => {
   window.addEventListener("resize", checkMobile);
   return () => window.removeEventListener("resize", checkMobile);
 }, []);
-
-
 
   return (
     <header
@@ -92,7 +89,7 @@ useEffect(() => {
         ) : null}
 
         {/*------Desktop Navigation------*/}
-        <nav className="hidden md:flex space-x-8 text-lg font-semibold">
+        <nav className="hidden md:flex space-x-8 text-md font-semibold">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
