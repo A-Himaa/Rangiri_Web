@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import sec1img from "../../../public/Assets/companies/company_bg.jpg";
@@ -14,160 +15,119 @@ import drugmart from "../../../public/Assets/companies/drugMart.png";
 import nishu from "../../../public/Assets/companies/nishu.png";
 import arrow from "../../../public/Assets/arrow.png";
 
-
 export default function Companies() {
   return (
-  <>
+    <>
+    {/* Section 1 */}
+    <main className="relative h-[20vh] md:h-[30vh] w-full flex overflow-hidden">
+      <Image
+        src={sec1img}
+        alt="company background"
+        fill
+        className="object-cover object-center"
+        style={{ filter: "blur(1px)" }}
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
+      <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-23 md:pt-30 pl-10 md:pl-40">
+         Our Companies
+      </div>
+    </main>
+    
+    {/* Section 2 */}
+    <section className="relative h-auto md:h-auto w-full flex items-center justify-center overflow-hidden">
+      <Image
+        src={sec2img}
+        alt="Background Image"
+        fill
+        className="object-cover object-left opacity-12"
+        priority
+     />
+     <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-25" />
 
-  {/* Section 1 */}
-  <main className="relative h-[30vh] w-full flex overflow-hidden">
-    <Image
-      src={sec1img}
-      alt="company background"
-      fill
-      className="object-cover object-center"
-      style={{ filter: "blur(1px)" }} 
-      priority
-    />
-
-    {/* Dark Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
-
-    {/* Text */}
-    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-30 md:pt-35 pl-20">
-      Our Companies
-    </div>
-  </main>
-
-  {/* Section 2 */}
-  <section className="relative h-auto md:h-[70vh] w-full flex items-center justify-center overflow-hidden py-12 md:py-0">
-    <Image 
-      src={sec2img}
-      alt="Section background"
-      fill
-      className="object-cover object-left opacity-12"
-      priority
-    />
-
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-30" />
-
-    {/* Content */}
-    <motion.div
-      className="relative z-10 text-white px-4 sm:px-8 md:px-35 text-center"
-      initial={{ opacity: 0, y: 30 }}      
-      animate={{ opacity: 1, y: 0 }}       
-      transition={{ duration: 1, ease: "easeOut" }} 
-    >
-      <motion.h1
-        className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-8 md:mb-15 text-red-900 mt-[-20px] md:-mt-10"
-        initial={{ scale: 1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-      >
-        One Vision, Many Ventures
-      </motion.h1>
-
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-15 items-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        {/* Logo */}
         <motion.div
-          className="flex justify-center md:justify-center mb-6 md:mb-0"
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.6, duration: 1 }}
+          className="relative z-10 text-white px-8 md:max-w-7xl text-center h-full"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <Image 
-            src={logo} 
-            alt="Company logo" 
-            width={230} 
-            height="auto" 
-            className="w-[220px] sm:w-[260px] md:w-[330px] h-auto"
-          />
+          <h1 className="text-lg md:text-4xl font-bold my-8 text-red-900">
+            One Vision, Many Ventures
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+            <div className="flex justify-center md:justify-center">
+              <Image
+                src={logo}
+                alt="Rangiri Logo"
+                className="w-[150px] md:w-[280px] h-auto"
+              />
+            </div>
+
+            <div>
+              <p className="text-sm md:text-base leading-relaxed md:leading-loose tracking-wide text-gray-800 text-justify md:mb-5">
+                The name “Rangiri” has grown to represent trust, progress, and
+                shared purpose across Sri Lanka—touching lives beyond boundaries.
+                More than a business, we have become a symbol of opportunity,
+                creating livelihoods, empowering communities, and inspiring hope
+                for those striving for a brighter tomorrow. Our journey is not
+                only about building enterprises but about building people,
+                nurturing dreams, and contributing to the nation’s growth in
+                every step we take. Over the years, Rangiri has become a beacon of
+                resilience and unity, guiding countless individuals toward
+                self-reliance and success. From empowering local entrepreneurs to
+                uplifting rural communities through sustainable initiatives, every
+                endeavor reflects our belief that true progress lies in collective
+                advancement. With innovation as our compass and integrity as our
+                foundation, we continue to move forward—shaping a legacy where
+                prosperity and purpose walk hand in hand.
+              </p>
+            </div>
+          </div>
         </motion.div>
+      </section>
 
-        {/* Text */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 1 }}
-        >
-          <p className="text-sm sm:text-base md:text-xl leading-relaxed md:leading-loose tracking-wide text-gray-800 text-justify px-2 sm:px-4 md:px-0">
-            The name “Rangiri” has grown to represent trust, progress, and shared purpose across Sri Lanka, 
-            touching lives beyond boundaries. More than a business, we have become a symbol of opportunity—creating 
-            livelihoods, empowering communities, and inspiring hope for those striving for a brighter tomorrow. 
-            Our journey is not only about building enterprises but about building people, nurturing dreams, 
-            and contributing to the nation’s growth in every step we take.
-          </p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  </section>
+      {/* Section 3 */}
+      <section className="px-6 md:px-30 py-20 bg-white overflow-x-hidden">
 
-  <div className="flex items-center justify-center">
-    <button className="-mt-4 md:-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-lg md:text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
-      Read more
-    <Image 
-      src={arrow}
-      alt="arrow icon"
-      className="w-5 h-5 object-contain"
-    />
-    </button>
-  </div> 
-
-  {/* Section 3 */}
-  <section className="px-6 md:px-25 py-20 bg-white">
-
-      {/* --- Stretch Tec --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 50, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="overflow-hidden rounded-[50px_0_0_50px] shadow-lg ml-20">
+        {/* --- Stretch Tec --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Image Left */}
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
           <Image
             src={stretchTec}
-            alt="Stretchtec Factory"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            alt="Stretch Tec"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
 
-        <div className="shadow-md p-8 border border-gray-200 mr-15 bg-gray-100 h-[420px] -mr-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
-            Stretchtec (Pvt) Limited
+        {/* Text Right */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+            Stretch Tec (Pvt) Limited
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
-            Stretchtec (Pvt.) Ltd. was relocated under the guidance of the present
-            management and has since focused on producing high-demand products with
-            strict attention to quality in raw materials, production, and processes.
-            Our steady growth, even through economic recessions and the Covid-19
-            period, reflects the strength of our systems and the dedication of our
-            loyal team. With a mission to support customers in achieving their goals
-            and competing globally, we continue to build success on the pillars of
-            quality, service, and integrity.
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+            Stretch Tec (Pvt) Limited was relocated under the guidance of the
+            present management and has since focused on producing high-demand
+            products with strict attention to quality in raw materials,
+            production, and processes. Our steady growth, even through economic
+            recessions and the Covid-19 period, reflects the strength of our
+            systems and the dedication of our loyal team. With a mission to
+            support customers in achieving their goals and competing globally,
+            we continue to build success on the pillars of quality, service, and
+            integrity.
           </p>
+          </div>
         </div>
-      </motion.div>
 
-      {/* --- Rangiri Aqua --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 25, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="bg-gray-100 shadow-md p-8 border border-gray-200 h-[420px] order-2 md:order-1">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* --- Rangiri Aqua --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Text Left */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             Rangiri Aqua Edutainment Academy
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             Rangiri Aqua is a serene edutainment and recreational destination set beside 
             the tranquil Ibbankutuwa Reservoir. Spanning 15 acres of natural beauty, it offers 
             comfortable accommodation with 40 double rooms, 3 family suites, and spacious camping 
@@ -176,40 +136,37 @@ export default function Companies() {
             Rangiri Aqua provides the ideal setting for both relaxation and adventure, with activities 
             such as archery, rafting, and fun activities that cater to guests seeking excitement 
             and tranquility alike.
+
           </p>
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[0_50px_50px_0] shadow-lg order-1 md:order-2 mr-25">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
           <Image
             src={rangiriAqua}
             alt="Rangiri Aqua"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
-      </motion.div>
+        </div>
 
-      {/* --- Synergy --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 50, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="overflow-hidden rounded-[50px_0_0_50px] shadow-lg ml-20">
+        {/* --- Synergy --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Image Left */}
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
           <Image
             src={synergy}
             alt="Synergy"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
 
-        <div className="shadow-md p-8 border border-gray-200 mr-15 bg-gray-100 h-[420px] -mr-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* Text Right */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             Synergy of Heart and Soul
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             In Sri Lanka, over half a million children are identified as intellectually 
             disabled. Synergy of Heart and Soul, is a community-driven effort that welcomes 
             children of all ages, backgrounds, and cultures—reflecting our belief in unity and 
@@ -218,22 +175,17 @@ export default function Companies() {
             social, and economic factors shift, it becomes our responsibility to seek solutions 
             through research and action to restore and strengthen the welfare of society.
           </p>
+          </div>
         </div>
-      </motion.div>
 
-      {/* --- RMIT Campus --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 25, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="bg-gray-100 shadow-md p-8 border border-gray-200 h-[420px] order-2 md:order-1">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* --- RMIT --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Text Left */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             RMIT Campus
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             RMIT Campus offers a diverse range of educational and vocational programs designed 
             for students and professionals seeking personal and career growth. With a focus on 
             academic excellence, language development, entrepreneurship, and workforce readiness, 
@@ -241,40 +193,37 @@ export default function Companies() {
             The campus also leads impactful initiatives, including vocational training for differently 
             talented children and comprehensive career guidance programs, carried out in collaboration 
             with our RMIT and REIST campuses.
+
           </p>
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[0_50px_50px_0] shadow-lg order-1 md:order-2 mr-25">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
           <Image
             src={rmit}
-            alt="RMIT"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            alt="RMIT Campus"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
-      </motion.div>
+        </div>
 
-      {/* --- Livinco --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 50, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="overflow-hidden rounded-[50px_0_0_50px] shadow-lg ml-20">
+        {/* --- Livinco --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Image Left */}
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
           <Image
             src={livinco}
             alt="Livinco"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
 
-        <div className="shadow-md p-8 border border-gray-200 mr-15 bg-gray-100 h-[420px] -mr-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* Text Right */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             Livinco International (Pvt) Ltd
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             Livinco International (Pvt) Ltd was founded in 2010 and incorporated on 28 October 
             2010 with the vision of building and selling houses in the open property market. 
             Over time, the company shifted its focus from small residential units to commercial 
@@ -284,81 +233,68 @@ export default function Companies() {
             Livinco has consistently remained active, delivering residential projects tailored to 
             customers’ lifestyles.
           </p>
+          </div>
         </div>
-      </motion.div>
 
-      {/* --- Pulse --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 25, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="bg-gray-100 shadow-md p-8 border border-gray-200 h-[420px] order-2 md:order-1">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* --- Pulse --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Text Left */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             Pulse Media TV Channel
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             Pulse Media TV Channel is dedicated to reflecting the people’s voice by building a 
             knowledgeable and resilient community capable of thriving through challenges. Through 
             its special projects, the channel focuses on programs that empower and strengthen the legal 
             framework of society.
+
           </p>
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[0_50px_50px_0] shadow-lg order-1 md:order-2 mr-25">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
           <Image
             src={pulse}
             alt="Pulse TV"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
-      </motion.div>
+        </div>
 
-      {/* --- Pharmacy --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 50, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="overflow-hidden rounded-[50px_0_0_50px] shadow-lg ml-20">
+        {/* --- Drug Mart --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Image Left */}
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
           <Image
             src={drugmart}
             alt="Drug Mart"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
 
-        <div className="shadow-md p-8 border border-gray-200 mr-15 bg-gray-100 h-[420px] -mr-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
-            Drug Mart - Pharmaceutical Chain
+        {/* Text Right */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+            Drug Mart
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             Our Pharmaceutical Chain supplies high-quality pharmaceutical and consumer products, 
             offering drugs, groceries, and perishables under one roof through a unique ‘Farm to Plate’ 
             concept. Special projects include conducting awareness sessions to promote protection against 
             non-infectious diseases, delivered through BS Pharma & Grocery Marts and four Drug Mart locations.
           </p>
+          </div>
         </div>
-      </motion.div>
 
-      {/* --- Nishu --- */}
-      <motion.div 
-        className="grid md:grid-cols-2 items-center mb-20"
-        initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 25, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 1 }}
-        viewport={{once: true}}>
-
-        <div className="bg-gray-100 shadow-md p-8 border border-gray-200 h-[420px] order-2 md:order-1">
-          <h2 className="text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-5">
+        {/* --- Nishu --- */}
+        <div className="grid md:grid-cols-2 items-center mb-20">
+        {/* Text Left */}
+        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
             Nishu Creation (Pvt) Ltd
           </h2>
-          <p className="text-gray-700 leading-relaxed text-justify">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
             Nishu Creations is a technology-driven printing solutions provider specializing in RFID smart printing, 
             barcode printing, and custom label production. We deliver innovative and affordable printing solutions 
             designed to meet the evolving needs of modern businesses. With a focus on precision, durability, and smart 
@@ -370,32 +306,27 @@ export default function Companies() {
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[0_50px_50px_0] shadow-lg order-1 md:order-2 mr-25">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
           <Image
             src={nishu}
-            alt="Pulse TV"
-            className="object-cover w-full h-[300px] md:h-[350px] opacity-90"
+            alt="Nishu Creations"
+            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
           />
         </div>
-      </motion.div>
-    </section> 
+        </div>
 
-      
 
-    {/* Section 4 */}
-    {/* <div className="">
-
-    </div> */}
-
-    
+        
 
 
 
 
 
 
+
+
+
+      </section>
     </>
-      
-    
   );
 }
