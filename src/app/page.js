@@ -15,7 +15,6 @@ import learning from "../../public/Assets/Cards1/learning.jpg";
 import living from "../../public/Assets/Cards2/livinco.jpg";
 import media from "../../public/Assets/Cards1/media.jpg";
 import health from "../../public/Assets/Cards1/health.jpg";
-import arrow from "../../public/Assets/arrow.png";
 import st from "../../public/Assets/Cards2/stretchTec.jpg";
 import ra from "../../public/Assets/Cards2/rangiriAqua.jpg";
 import sh from "../../public/Assets/Cards2/synergy.jpeg";
