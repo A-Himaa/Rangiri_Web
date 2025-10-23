@@ -43,7 +43,7 @@ export default function Home() {
    const cards = [
     {
       src: st,
-      title: "Stretch Tech",
+      title: "Stretch Tech (Pvt) Ltd",
       desc: "Stretch Tech stands at the forefront of innovation, specializing in both elastic and non-elastic looming to deliver precision, strength, and quality in every weave."
     },
     {
@@ -203,331 +203,311 @@ export default function Home() {
     </div>
     </div>
     </motion.section>
-
-
-
-    
-
-      {/* FORTH SECTION */}
-      <section>
-        <div className="relative -mt-48 h-[160vh] md:h-[98vh] ">
-          <Image
-            src={sec3image}
-            alt="section3 background"
-            fill
-            className="object-cover object-center opacity-15 overflow-hidden"
-          />
-          <div className="absolute z-10 mt-60 px-8 md:px-40 text-center ">
-
-            <motion.h1 
-              className="text-2xl md:text-4xl text-red-900 font-bold"
-              initial= {{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.4}}>
-              Rangiri Holdings (PVT) Ltd.
-            </motion.h1>
-
-            <motion.h3 
-              className="text-lg md:text-2xl text-orange-900 font-semi-bold md:font-bold opacity-90 md:py-3"
-              initial= {{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.4}}>
-                Building a legacy of growth, innovation, and sustainability in Sri Lanka.
-              </motion.h3>
-
-            <motion.div
-              initial= {{opacity: 0, y: 20}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{delay:0.3, duration: 0.8, ease: "easeOut"}}
-              viewport={{once: true, amount: 0.4}}>
-                <p className="text-sm md:text-lg font-semi-bold text-justify pt-5 text-gray-700">The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.</p>
-                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.</p>
-                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.</p>
-                <p className="text-sm md:text-lg font-semi-bold text-justify pt-2 text-gray-700">With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.</p>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Read More Button */}
-        <div className="flex items-center justify-center">
-          <button className="-mt-4 md:-mt-7 z-10 flex items-center gap-3 bg-orange-900 rounded-full text-lg md:text-xl text-white font-bold px-7 py-3 opacity-80 hover:opacity-100 transform hover:scale-105 transition duration-400 ease-in-out">
-              Read more
-          <Image 
-            src={arrow}
-            alt="arrow icon"
-            className="w-5 h-5 object-contain"
-          />
-          </button>
-        </div>  
-      </section>
-
-      {/* FIFTH SECTION */}
-      <section className="relative md:-mt-6 mt-10">
-        {/* Background image */}
-        <Image
-          src={sec4image}
-          alt="Section 4"
-          className="object-cover object-center w-full h-[90vh] opacity-10"
-        />
-
-        {/* Overlay container */}
-        <div className="absolute md:absolute inset-0 flex flex-col items-center justify-center md:space-y-12 px-6">
-          
-          {/* Title */}
-          <div className="flex items-center w-full justify-center gap-6 md:px-8 text-center">
-            <hr className="w-1/4 md:border-t-2 border-gray-300" />
-            <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase mb-3">
-              Our Sectors
-            </h1>
-            <hr className="w-1/4 md:border-t-2 border-gray-300" />
-          </div>
-
-          {/* Cards Section */}
-          <div className="space-y-5">
-            {/* Row 1 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl opacity-90">
-              {/* Card 1 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
-                <Image src={apparel} alt="Apparel" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Garment & Apparel</h2>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
-                <Image src={leisure} alt="Leisure" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Leisure & Relaxation</h2>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
-                <Image src={learning} alt="Learning" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Learning & Development</h2>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
-              {/* Card 4 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-                <Image src={living} alt="Living" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Living Solutions</h2>
-                </div>
-              </div>
-
-              {/* Card 5 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-                <Image src={media} alt="Media" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Media & Printing</h2>
-                </div>
-              </div>
-
-              {/* Card 6 */}
-              <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-                <Image src={health} alt="Health" className="w-full h-48 object-cover" />
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-                  <h2 className="text-2xl font-bold">Health Care</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SIXTH SECTION */}
-      <section className="relative">
-      
-       <Image 
-          src={sec4image}
-          alt="Section 4"
-          className="object-cover object-center w-full opacity-8 mt-20 h-[85vh]"
-          style={{ transform: 'rotate(180deg)' }}
-        />
-
-      <div className="absolute inset-0 md:-mt-45 px-5 md:px-55">
-      {/* Heading */}
-      <div className="flex items-center justify-center gap-6 mb-8 text-center md:mt-20 ">
-        <hr className="w-1/4 border-t-2 border-gray-300" />
-        <h1 className="text-2xl md:text-4xl font-bold text-gray-600 tracking-wide uppercase">Our Strength</h1>
-        <hr className="w-1/4 border-t-2 border-gray-300" />
-      </div>
-
-      {/* Paragraph */}
-      <p className="text-center text-gray-500 text-lg mb-15 px-10">
-        “ Our diversified group is built on trust, innovation, and excellence, bringing together businesses across multiple industries to create sustainable value for communities and partners. “
-      </p>
-
-      {/* Carousel */}
-      <div className="relative">
-        {/* Left button */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute md:-left-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
-        >
-          <FaChevronLeft size={22} />
-        </button>
-
-        {/* Cards container */}
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth no-scrollbar gap-6 pb-5"
-        >
-          {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={card.src}
-                alt={card.title}
-                className="w-full h-50 object-cover opacity-90"
-              />
-              <div className="p-5 text-center no-scrollbar">
-                <h2 className="text-2xl font-bold text-gray-700 mb-2">{card.title}</h2>
-                <p className="text-gray-600 text-sm md:text-lg">{card.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Right button */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-0 md:-right-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
-        >
-          <FaChevronRight size={22} />
-        </button>
-      </div>
-
-    
+ 
+    {/* FORTH SECTION */}
+    <section>
+    <div className="relative -mt-50 md:-mt-50">
+    <div className="relative w-full min-h-[100vh] md:min-h-[110vh]">
+      <Image
+        src={sec3image}
+        alt="Map"
+        fill
+        className="object-cover object-center opacity-15 -z-10"
+      />
     </div>
-      </section>
 
-      {/* Counting Section */}
-      <section 
-        className="relative h-[80vh] flex items-center justify-center text-white mt-58 md:mt-0">
+    <div className="absolute inset-0 z-10 mt-60 px-8 md:px-40 text-center">
+      <motion.h1
+        className="text-lg md:text-4xl text-red-900 font-bold"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        Rangiri Holdings (PVT) Ltd.
+      </motion.h1>
+
+      <motion.h3
+        className="text-md md:text-2xl text-orange-900 font-semibold md:font-bold opacity-90 md:py-3"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        Building a legacy of growth, innovation, and sustainability in Sri Lanka.
+      </motion.h3>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <p className="text-xs md:text-lg text-justify pt-5 text-gray-500">
+          The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.
+        </p>
+        <p className="text-xs md:text-lg text-justify pt-2 text-gray-500">
+          From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.
+        </p>
+        <p className="hidden md:block text-xs md:text-lg text-justify pt-2 text-gray-500">
+          Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.
+        </p>
+        <p className="text-xs md:text-lg text-justify pt-2 text-gray-500">
+          With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.
+        </p>
+      </motion.div>
+    </div>
+    </div>
+    </section>
+
+    {/* FIFTH SECTION */}
+    <section className="relative">
+      <Image
+        src={sec4image}
+        alt="background image"
+        className="object-cover object-center w-full h-[100vh] opacity-10"
+      />
+
+      <div className="absolute md:absolute inset-0 flex flex-col items-center justify-center md:space-y-12 px-8 md:px-40">
+        <div className="flex items-center w-full justify-center gap-6 md:px-8 text-center">
+          <hr className="w-1/4 md:border-t-2 border-gray-300" />
+          <h1 className="text-lg md:text-4xl font-bold text-gray-600 tracking-wide uppercase mb-3">
+            Our Sectors
+          </h1>
+          <hr className="w-1/4 md:border-t-2 border-gray-300" />
+        </div>
+
+        {/* Cards Section */}
+         <div className="space-y-5">
+         {/* Row 1 */}
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl opacity-90">
+         {/* Card 1 */}
+          <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+            <Image src={apparel} alt="Apparel" className="w-full h-48 object-cover" />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Garment & Apparel</h2>
+            </div>
+          </div>
+
+        {/* Card 2 */}
+          <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+            <Image src={leisure} alt="Leisure" className="w-full h-48 object-cover" />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Leisure & Relaxation</h2>
+            </div>
+          </div>
+
+        {/* Card 3 */}
+        <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-400">
+            <Image src={learning} alt="Learning" className="w-full h-48 object-cover" />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Learning & Development</h2>
+            </div>
+        </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl">
+        {/* Card 4 */}
+        <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+          <Image src={living} alt="Living" className="w-full h-48 object-cover" />
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Living Solutions</h2>
+            </div>
+        </div>
+
+        {/* Card 5 */}
+        <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+           <Image src={media} alt="Media" className="w-full h-48 object-cover" />
+           <div className="absolute inset-0 bg-black/40"></div>
+           <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Media & Printing</h2>
+           </div>
+         </div>
+
+         {/* Card 6 */}
+         <div className="h-20 md:h-full relative bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+           <Image src={health} alt="Health" className="w-full h-48 object-cover" />
+           <div className="absolute inset-0 bg-black/40"></div>
+           <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+              <h2 className="text-2xl font-bold">Health Care</h2>
+           </div>
+           </div>
+          </div>
+         </div>
+        </div>
+    </section>
+
+    {/* SIXTH SECTION */}
+    <section className="relative">
       
+    <Image 
+      src={sec4image}
+      alt="Background Image"
+      className="object-cover object-center w-full opacity-8 md:mt-20 h-[90vh]"
+      style={{ transform: 'rotate(180deg)' }}
+    />
+
+    <div className="absolute inset-0 md:-mt-45 px-5 md:px-55">
+    {/* Heading */}
+    <div className="flex items-center justify-center gap-6 mb-8 text-center md:mt-20 ">
+      <hr className="w-1/4 border-t-2 border-gray-300" />
+      <h1 className="text-lg md:text-4xl font-bold text-gray-600 tracking-wide uppercase">Our Strength</h1>
+      <hr className="w-1/4 border-t-2 border-gray-300" />
+    </div>
+
+    {/* Paragraph */}
+    <p className="text-center text-gray-500 text-md md:text-lg mb-8 md:mb-15 px-10">
+        “ Our diversified group is built on trust, innovation, and excellence, bringing together businesses across multiple industries to create sustainable value for communities and partners. “
+    </p>
+
+    {/* Carousel */}
+    <div className="relative">
+    {/* Left button */}
+    <button
+      onClick={() => scroll("left")}
+      className="absolute md:-left-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+    >
+      <FaChevronLeft size={22} />
+    </button>
+
+    {/* Cards container */}
+    <div
+      ref={scrollRef}
+      className="flex overflow-x-auto scroll-smooth no-scrollbar gap-6 pb-5"
+    >
+    {cards.map((card, idx) => (
+    <div
+      key={idx}
+      className="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+    >
+    <Image
+      src={card.src}
+      alt={card.title}
+      className="w-full h-50 object-cover opacity-90"
+    />
+    <div className="p-5 text-center no-scrollbar">
+      <h2 className="text-2xl font-bold text-gray-600 mb-2">{card.title}</h2>
+      <p className="text-gray-500 text-sm md:text-md">{card.desc}</p>
+    </div>
+    </div>
+   ))}
+    </div>
+
+    {/* Right button */}
+    <button
+      onClick={() => scroll("right")}
+      className="absolute right-0 md:-right-15 top-1/2 -translate-y-1/2 z-10 bg-gray-600 opacity-40 text-white p-3 rounded-full hover:bg-gray-900 transition"
+    >
+       <FaChevronRight size={22} />
+    </button>
+    </div>
+
+    </div>
+    </section>
+
+    {/* Counting Section */}
+    <section className="relative h-[80vh] flex items-center justify-center text-white md:mt-0">
       <Image
         src={sec5image}
-        alt="Our Impact"
+        alt="Unity"
         fill
         className="object-cover object-center opacity-70"
         priority
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-black/40" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl w-full md:px-12 px-5 grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-5">
-        
-        {/* Left Text */}
-        <div className="flex flex-col justify-center">
-          <h2 className="text-3xl md:text-6xl font-bold leading-tight tracking-wide text-center">
-            OUR <br /> IMPACT IN <br /> NUMBERS
-          </h2>
-        </div>
+    {/* Content */}
+    <div className="relative z-10 max-w-6xl w-full md:px-12 px-8 grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-5">
+       
+    {/* Left Text */}
+    <div className="flex flex-col justify-center">
+      <h2 className="text-2xl md:text-6xl font-bold leading-tight tracking-wide text-center">
+       OUR <br /> IMPACT IN <br /> NUMBERS
+      </h2>
+    </div>
 
-        {/* Right Stats */}
-        <div className="grid grid-cols-2 gap-6">
-          {stats.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="border-5 border-white flex flex-col items-center justify-center py-8 px-4 bg-black/30 backdrop-blur-sm"
-            >
-              <h3 className="text-4xl font-bold mb-2">
-                <CountUp
-                  end={item.value}
-                  duration={2}
-                  suffix={item.suffix}
-                  enableScrollSpy
-                  scrollSpyOnce
-                />
-              </h3>
-              <p className="text-center text-sm md:text-xl font-medium">
-                {item.label1} <br /> {item.label2}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      </section>
+    {/* Right Stats */}
+    <div className="grid grid-cols-2 gap-6">
+      {stats.map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: i * 0.2 }}
+          viewport={{ once: true }}
+          className="border-5 border-white flex flex-col items-center justify-center py-8 px-4 bg-black/30 backdrop-blur-sm"
+        >
+      <h3 className="text-4xl font-bold mb-2">
+        <CountUp
+          end={item.value}
+          duration={2}
+          suffix={item.suffix}
+          enableScrollSpy
+          scrollSpyOnce
+        />
+      </h3>
+      <p className="text-center text-sm md:text-xl font-medium">
+        {item.label1} <br /> {item.label2}
+      </p>
+      </motion.div>
+       ))}
+    </div>
+    </div>
+    </section>
 
-      <motion.section 
-            className="relative -mt-10 z-10 px-8 md:px-38"
-            initial={{opacity: 0, y: 20}}
-            whileInView={{opacity: 1, y: 0}}
-            transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
-            viewport={{once: false, amount: 0.5}}>
+    {/* Banner Section */}
+    <motion.section 
+        className="relative -mt-10 z-10 px-8 md:px-38"
+        initial={{opacity: 0, y: 20}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
+        viewport={{once: false, amount: 0.5}}>
+
       <div className="relative bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
-
       <div className="p-15 flex items-center">
-        <p className="text-gray-500 font-bold text-xl text-center tracking-wide">
+        <p className="text-gray-500 font-bold text-lg md:text-xl text-center tracking-wide">
           By 2030, our mission  is to design and carry out road maps that support Rangiri Holdings' objective of expanding its business portfolio while protecting sustainability and national interests
         </p>
       </div>
+      </div>
+    </motion.section>
 
-  </div>
-      </motion.section>
-
-      {/* Final Section */}
-      <motion.section 
+    {/* Final Section */}
+    <motion.section 
       className="py-20 px-10 bg-gray-50 mt-10"
       initial={{opacity: 0, y: 20}}
       whileInView={{opacity: 1, y: 0}}
       transition={{delay: 0.2, duration: 1, ease: "easeOut"}}
       viewport={{once: false, amount: 0.5}}>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="bg-transparent overflow-hidden "
-            >
-              <Image
-                src={item.img}
-                alt="icons"
-                className="w-15 md:w-30 mx-auto"
-              />
-              <div className="p-6 text-center">
-                <p className="text-gray-600 text-center leading-relaxed md:text-lg">
-                  {item.desc}
-                </p>
-              </div>
-            </div>
+     <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="bg-transparent overflow-hidden "
+          >
+          <Image
+            src={item.img}
+            alt="icons"
+            className="w-15 md:w-30 mx-auto"
+          />
+          <div className="p-6 text-center">
+            <p className="text-gray-600 text-center leading-relaxed md:text-lg">
+              {item.desc}
+            </p>
+          </div>
+          </div>
           ))}
         </div>
       </div>
-      </motion.section>
-
-
-
-
-
-
-
-
-
+     </motion.section>
     </>
   );
 
