@@ -12,7 +12,6 @@ import g3 from "../../../public/Assets/csr/gallery3.jpg";
 import g4 from "../../../public/Assets/csr/gallery4.jpg";
 import g5 from "../../../public/Assets/csr/gallery5.jpg";
 import g6 from "../../../public/Assets/csr/gallery6.jpg";
-// import g7 from "../../../public/Assets/csr/gallery7.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,41 +22,41 @@ export default function csr() {
   return (
     <>
     {/* Section 1*/}
-    <main className="relative h-[30vh] w-full flex overflow-hidden">
+    <main className="relative h-[20vh] md:h-[30vh] w-full flex overflow-hidden">
       <Image
         src={sec1img}
-        alt="contact background"
+        alt="company background"
         fill
         className="object-cover object-center"
         style={{ filter: "blur(1px)" }} 
         priority
-    />
-    
+      />
+
     <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
-    
-    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-30 md:pt-35 pl-20">
+
+    {/* Text */}
+    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-23 md:pt-30 pl-10 md:pl-40">
       CSR
     </div>
-    </main>   
+    </main> 
 
     {/* Section 2 */}
-    <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden"> 
+    <section className="relative min-h-[100vh] md:min-h-[85vh] w-full flex items-center justify-center overflow-hidden"> 
       <Image 
         src={sec2img}
-        alt="Section background"
+        alt="Background Image"
         fill
         className="object-cover object-left opacity-10"
         priority
       />
-      <div className="max-w-6xl mx-auto text-center mt-50 md:-mt-20">
+      <div className="max-w-7xl mx-auto text-center">
         <div className="flex flex-col items-center">
           <Image
             src={synergylogo}
             alt="Rangiri Logo"
-            width={700}
-            height="auto"
+            className="w-60 h-auto md:w-120"
           />
-         <p className="text-gray-700 leading-relaxed text-justify text-sm md:text-lg px-8">
+         <p className="text-gray-700 leading-relaxed text-justify text-xs md:text-base px-8">
            According to world statistics, Sri Lanka is home to more than half a million 
            children living with intellectual disabilities. In response to this reality, 
            the Institute for Research and Expedition of Social Attitudes and Cognitive 
@@ -98,13 +97,13 @@ export default function csr() {
         <div className="md:w-1/2">
           <Image
             src={visionImg}
-            alt="Our Vision"
+            alt="Vision"
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
         <div className="md:w-1/2 p-8 text-left">
-          <h3 className="text-2xl md:text-4xl font-bold text-[#a8322d] mb-3">Our Vision</h3>
-          <p className="text-gray-700 leading-relaxed text-sm md:text-lg  text-justify">
+          <h3 className="text-xl md:text-4xl font-bold text-[#a8322d] mb-3">Our Vision</h3>
+          <p className="text-gray-500 leading-relaxed text-xs md:text-base  text-justify">
             Our vision is to make this world a better place for children living with special needs through
             compassion, inclusion, and empowerment. We strive to create an equal platform for them to realize
             their true potential, inspiring a society of care and collective uplift in quality of life.
@@ -123,13 +122,13 @@ export default function csr() {
         <div className="md:w-1/2">
           <Image
             src={missionImg}
-            alt="Our Mission"
+            alt="Mission"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="md:w-1/2 p-8 text-left">
-          <h3 className="text-2xl md:text-4xl font-bold text-[#a8322d] mb-3">Our Mission</h3>
-          <p className="text-gray-700 leading-relaxed text-sm md:text-lg text-justify">
+          <h3 className="text-xl md:text-4xl font-bold text-[#a8322d] mb-3">Our Mission</h3>
+          <p className="text-gray-500 leading-relaxed text-xs md:text-base text-justify">
             The mission of Synergy of Heart & Soul is to bridge communities and promote inclusion for children
             with disabilities. We aim to create awareness, extend care, and engage the corporate sector and
             volunteers to build sustainable systems that help enhance the confidence and happiness of every

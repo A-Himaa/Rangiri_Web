@@ -29,13 +29,13 @@ export default function aboutUs() {
     <div className="absolute inset-0 bg-gradient-to-l from-black via-amber-900 to-stone-700 opacity-50" />
 
     {/* Text */}
-    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-48 md:pt-30 mx-auto md:mx-0 md:pl-40">
+    <div className="relative z-10 text-2xl md:text-5xl font-bold text-white pt-23 md:pt-30 pl-10 md:pl-40">
       About Us
     </div>
     </main>
 
     {/* Section 2 */}
-    <section className="relative md:h-[88vh] w-full flex items-center justify-center overflow-hidden"> 
+    <section className="relative md:h-[80vh] w-full flex items-center justify-center overflow-hidden"> 
       <Image 
         src={sec2img}
         alt="Background Image"
@@ -53,7 +53,7 @@ export default function aboutUs() {
             height={250}
             className="mb-10"
           />
-        <p className="text-gray-700 leading-relaxed text-justify text-sm md:text-base px-8">
+        <p className="text-gray-700 leading-relaxed text-justify text-sm md:text-base px-8 md:pb-10">
           Rangiri Holdings, cluster of entities, is concept of Mr. Nihal
           Pathirage. He made his mark in the city of Anuradhapura after his
           idea of life changing initiative. Evolving better from sports and
@@ -83,7 +83,7 @@ export default function aboutUs() {
         </p>
        </div>
       </div>
-     </section>
+    </section>
 
     {/* Section 3 */}
     <section className="py-12 bg-white text-center">
