@@ -13,7 +13,19 @@ import livinco from "../../../public/Assets/companies/livinco.png";
 import pulse from "../../../public/Assets/companies/pulse.png";
 import drugmart from "../../../public/Assets/companies/drugMart.png";
 import nishu from "../../../public/Assets/companies/nishu.png";
-import arrow from "../../../public/Assets/arrow.png";
+
+
+const logos = [
+  "/Assets/logos/StretchTec_logo.png",
+  "/Assets/logos/RangiriAqua_logo.png",
+  "/Assets/csr/synergy_logo.png",
+  "/Assets/logos/RMIT_logo.png",
+  "/Assets/logos/livinco_logo.png",
+  "/Assets/logos/PulseTV_logo.png",
+  "/Assets/logos/drugmart.jpg",
+  "/Assets/logos/Nishu_logo.png",
+];
+
 
 export default function Companies() {
   return (
@@ -314,6 +326,26 @@ export default function Companies() {
           />
         </div>
         </div>
+
+        <section className="py-10 bg-gray-50">
+      <h2 className="text-center text-lg md:text-2xl font-bold mb-6 text-red-900">Our Partners</h2>
+      <div className="flex gap-8 overflow-x-auto scrollbar-hide px-6 md:px-20 pb-5">
+        {logos.map((logo, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 flex items-center justify-center w-36 h-30 bg-white rounded-xl shadow-sm hover:shadow-md transition"
+          >
+            <Image
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              width={100}
+              height={60}
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
 
 
         
