@@ -260,7 +260,7 @@ export default function Home() {
     </section>
 
     {/* FIFTH SECTION */}
-    <section className="relative">
+    <section className="relative mt-40 md:mt-0">
       <Image
         src={sec4image}
         alt="background image"
@@ -285,7 +285,7 @@ export default function Home() {
             <Image src={apparel} alt="Apparel" className="w-full h-48 object-cover" />
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Garment & Apparel</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Garment & Apparel</h2>
             </div>
           </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
             <Image src={leisure} alt="Leisure" className="w-full h-48 object-cover" />
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Leisure & Relaxation</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Leisure & Relaxation</h2>
             </div>
           </div>
 
@@ -303,7 +303,7 @@ export default function Home() {
             <Image src={learning} alt="Learning" className="w-full h-48 object-cover" />
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Learning & Development</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Learning & Development</h2>
             </div>
         </div>
         </div>
@@ -315,7 +315,7 @@ export default function Home() {
           <Image src={living} alt="Living" className="w-full h-48 object-cover" />
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Living Solutions</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Living Solutions</h2>
             </div>
         </div>
 
@@ -324,7 +324,7 @@ export default function Home() {
            <Image src={media} alt="Media" className="w-full h-48 object-cover" />
            <div className="absolute inset-0 bg-black/40"></div>
            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Media & Printing</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Media & Printing</h2>
            </div>
          </div>
 
@@ -333,7 +333,7 @@ export default function Home() {
            <Image src={health} alt="Health" className="w-full h-48 object-cover" />
            <div className="absolute inset-0 bg-black/40"></div>
            <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-              <h2 className="text-2xl font-bold">Health Care</h2>
+              <h2 className="text-lg md:text-2xl font-bold">Health Care</h2>
            </div>
            </div>
           </div>
@@ -342,7 +342,7 @@ export default function Home() {
     </section>
 
     {/* SIXTH SECTION */}
-    <section className="relative">
+    <section className="relative mt-10 md:mt-0">
       
     <Image 
       src={sec4image}
@@ -410,7 +410,7 @@ export default function Home() {
     </section>
 
     {/* Counting Section */}
-    <section className="relative h-[80vh] flex items-center justify-center text-white md:mt-0">
+    <section className="relative h-[80vh] flex items-center justify-center text-white mt-50 md:mt-0">
       <Image
         src={sec5image}
         alt="Unity"
@@ -442,7 +442,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="border-5 border-white flex flex-col items-center justify-center py-8 px-4 bg-black/30 backdrop-blur-sm"
         >
-      <h3 className="text-4xl font-bold mb-2">
+      <h3 className="text-xl md:text-4xl font-bold mb-2">
         <CountUp
           end={item.value}
           duration={2}
@@ -469,8 +469,8 @@ export default function Home() {
         viewport={{once: false, amount: 0.5}}>
 
       <div className="relative bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
-      <div className="p-15 flex items-center">
-        <p className="text-gray-500 font-bold text-lg md:text-xl text-center tracking-wide">
+      <div className="p-8 md:p-15 flex items-center">
+        <p className="text-gray-500 font-bold text-sm md:text-xl text-center tracking-wide">
           By 2030, our mission  is to design and carry out road maps that support Rangiri Holdings' objective of expanding its business portfolio while protecting sustainability and national interests
         </p>
       </div>

@@ -87,26 +87,26 @@ export default function Companies() {
         </motion.div>
       </section>
 
-      {/* Section 3 */}
-      <section className="px-6 md:px-30 py-20 bg-white overflow-x-hidden">
+   {/* Section 3 */}
+    <section className="px-6 md:px-30 py-20 bg-white overflow-x-hidden">
 
         {/* --- Stretch Tec --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Image Left */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[98%] md:w-auto">
           <Image
             src={stretchTec}
             alt="Stretch Tec"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
 
         {/* Text Right */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mt-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Stretch Tec (Pvt) Limited
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Stretch Tec (Pvt) Limited was relocated under the guidance of the
             present management and has since focused on producing high-demand
             products with strict attention to quality in raw materials,
@@ -121,13 +121,13 @@ export default function Companies() {
         </div>
 
         {/* --- Rangiri Aqua --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Text Left */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mb-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Rangiri Aqua Edutainment Academy
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Rangiri Aqua is a serene edutainment and recreational destination set beside 
             the tranquil Ibbankutuwa Reservoir. Spanning 15 acres of natural beauty, it offers 
             comfortable accommodation with 40 double rooms, 3 family suites, and spacious camping 
@@ -141,32 +141,32 @@ export default function Companies() {
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[98%] md:w-auto">
           <Image
             src={rangiriAqua}
             alt="Rangiri Aqua"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
         </div>
 
         {/* --- Synergy --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Image Left */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[98%] md:w-auto">
           <Image
             src={synergy}
             alt="Synergy"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
 
         {/* Text Right */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mt-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Synergy of Heart and Soul
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             In Sri Lanka, over half a million children are identified as intellectually 
             disabled. Synergy of Heart and Soul, is a community-driven effort that welcomes 
             children of all ages, backgrounds, and cultures—reflecting our belief in unity and 
@@ -179,13 +179,13 @@ export default function Companies() {
         </div>
 
         {/* --- RMIT --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Text Left */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mb-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             RMIT Campus
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             RMIT Campus offers a diverse range of educational and vocational programs designed 
             for students and professionals seeking personal and career growth. With a focus on 
             academic excellence, language development, entrepreneurship, and workforce readiness, 
@@ -198,32 +198,32 @@ export default function Companies() {
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[98%] md:w-auto">
           <Image
             src={rmit}
             alt="RMIT Campus"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
         </div>
 
         {/* --- Livinco --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Image Left */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[98%] md:w-auto">
           <Image
             src={livinco}
             alt="Livinco"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
 
         {/* Text Right */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mt-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Livinco International (Pvt) Ltd
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Livinco International (Pvt) Ltd was founded in 2010 and incorporated on 28 October 
             2010 with the vision of building and selling houses in the open property market. 
             Over time, the company shifted its focus from small residential units to commercial 
@@ -237,13 +237,13 @@ export default function Companies() {
         </div>
 
         {/* --- Pulse --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Text Left */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mb-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Pulse Media TV Channel
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Pulse Media TV Channel is dedicated to reflecting the people’s voice by building a 
             knowledgeable and resilient community capable of thriving through challenges. Through 
             its special projects, the channel focuses on programs that empower and strengthen the legal 
@@ -253,32 +253,32 @@ export default function Companies() {
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[98%] md:w-auto">
           <Image
             src={pulse}
             alt="Pulse TV"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
         </div>
 
         {/* --- Drug Mart --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Image Left */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[50px_0_0_50px] shadow-lg mx-auto md:ml-25 w-[98%] md:w-auto">
           <Image
             src={drugmart}
             alt="Drug Mart"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
 
         {/* Text Right */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mt-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Drug Mart
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Our Pharmaceutical Chain supplies high-quality pharmaceutical and consumer products, 
             offering drugs, groceries, and perishables under one roof through a unique ‘Farm to Plate’ 
             concept. Special projects include conducting awareness sessions to promote protection against 
@@ -288,13 +288,13 @@ export default function Companies() {
         </div>
 
         {/* --- Nishu --- */}
-        <div className="grid md:grid-cols-2 items-center mb-20">
+        <div className="grid md:grid-cols-2 items-center mb-5 md:mb-20">
         {/* Text Left */}
-        <div className="bg-gray-100 shadow-md p-6 sm:p-8 border border-gray-200 mt-6 md:mt-0 mx-auto w-[95%] md:w-auto h-auto md:h-auto md:py-15">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-red-900 mb-4 py-3 md:py-5">
+        <div className="bg-gray-100 shadow-md p-6 border border-gray-200 mb-1 md:mt-0 mx-auto w-[98%] md:w-auto h-auto md:h-auto md:py-8">
+          <h2 className="text-lg md:text-3xl font-semibold text-red-900 py-1 md:py-5">
             Nishu Creation (Pvt) Ltd
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+          <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
             Nishu Creations is a technology-driven printing solutions provider specializing in RFID smart printing, 
             barcode printing, and custom label production. We deliver innovative and affordable printing solutions 
             designed to meet the evolving needs of modern businesses. With a focus on precision, durability, and smart 
@@ -306,11 +306,11 @@ export default function Companies() {
         </div>
 
         {/* Image Right */}
-        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[95%] md:w-auto">
+        <div className="overflow-hidden rounded-[30px] md:rounded-[0_50px_50px_0] shadow-lg mx-auto md:mr-25 w-[98%] md:w-auto">
           <Image
             src={nishu}
             alt="Nishu Creations"
-            className="object-cover w-full h-[250px] sm:h-[300px] md:h-[350px] opacity-90"
+            className="object-cover w-full h-[150px] md:h-[350px] opacity-90"
           />
         </div>
         </div>
@@ -326,7 +326,7 @@ export default function Companies() {
 
 
 
-      </section>
+    </section>
     </>
   );
 }
