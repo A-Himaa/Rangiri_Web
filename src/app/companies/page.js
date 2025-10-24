@@ -327,7 +327,8 @@ export default function Companies() {
         </div>
         </div>
 
-        <section className="py-10 bg-gray-50">
+    {/* Section 4 */}
+    <section className="py-10 bg-gray-50">
       <h2 className="text-center text-lg md:text-2xl font-bold mb-6 text-red-900">Our Partners</h2>
       <div className="flex gap-8 overflow-x-auto scrollbar-hide px-6 md:px-20 pb-5">
         {logos.map((logo, index) => (
