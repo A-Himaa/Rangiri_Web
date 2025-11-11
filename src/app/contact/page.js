@@ -59,7 +59,7 @@ export default function ContactUs() {
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 md:-mt-20">
 
           {/* Left: Contact Form */}
-            <div className="bg-white mt-10 md:mt-0 px-8">
+            <div className="bg-transparent mt-10 md:mt-0 px-8 z-10">
               <p className="text-gray-500 text-sm md:text-base mb-10 text-justify">
                 At Rangiri Holdings, we value the voices of our stakeholders and
                 customers. You are the driving force behind our journey of growth
@@ -68,51 +68,76 @@ export default function ContactUs() {
                 personalized responses to your messages.
               </p>
 
-              <form className="md:space-y-7">
-              <div>
-                <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                First Name:
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700"
-                />
-              </div>
+              <form
+                className="md:space-y-7"
+                action="https://formsubmit.co/akilahimaja"
+                method="POST"
+              >
+                {/* Hidden Fields */}
+                <input type="hidden" name="_replyto" value="akilahimaja@hotmail.com" />
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+                <input type="hidden" name="_captcha" value="false" />
 
-              <div>
-                <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                Last Name:
-                </label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700"
-                />
-              </div>
+                <div>
+                  <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
+                    First Name:
+                  </label>
+                  <input
+                    type="text"
+                    name="First Name"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                  Email:
-                </label>
-                <input
-                type="email"
-                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700"
-                />
-              </div>
+                <div>
+                  <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
+                    Last Name:
+                  </label>
+                  <input
+                    type="text"
+                    name="Last Name"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                  Message:
-                </label>
-                <textarea
-                  rows="4"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-amber-700"
+                <div>
+                  <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
+                    Email:
+                  </label>
+                  <input
+                    type="email"
+                    name="Email"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
+                    Message:
+                  </label>
+                  <textarea
+                    name="Message"
+                    rows="4"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-1 focus:ring-amber-700"
+                    required
                   ></textarea>
-              </div>   
+                </div>
+
+                <button
+                  type="submit"
+                  className="bg-[#7b3f2f] text-white font-semibold px-8 py-2 mb-5 md:py-3 rounded-md hover:bg-[#5a2c1f] transition"
+                >
+                  Send Message
+                </button>
               </form>
+
             </div>
 
           {/* Right: Contact Info */}
-            <div className="bg-white space-y-2 md:space-y-4 px-8">
+            <div className="bg-transparent space-y-2 md:space-y-4 px-8 z-10">
             {/* Phone */}
               <div className="flex items-center gap-3">
               <div className="flex items-center justify-center bg-gray-200 px-5 py-5 rounded-md border border-gray-300">
@@ -161,7 +186,7 @@ export default function ContactUs() {
               <div className="flex items-center justify-center bg-gray-200 py-3 md:py-6 px-4 rounded-md border border-gray-300">
                 <div className="flex gap-3">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/share/17mmuUxosS/"
                     className="p-2 bg-[#7b3f2f] rounded-md hover:bg-[#5a2c1f] transition"
                   >
                     <FaFacebookF className="text-white text-md md:text-xl" />
@@ -173,7 +198,7 @@ export default function ContactUs() {
                     <FaInstagram className="text-white text-md md:text-xl" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/rangiri-holdings/?originalSubdomain=lk"
                     className="p-2 bg-[#7b3f2f] rounded-md hover:bg-[#5a2c1f] transition"
                   >
                     <FaLinkedinIn className="text-white text-md md:text-xl" />
@@ -182,12 +207,7 @@ export default function ContactUs() {
               </div>
               </div>
 
-              <button
-                type="submit"
-                className="bg-[#7b3f2f] text-white font-semibold px-8 py-2 mb-5 md:py-3 rounded-md hover:bg-[#5a2c1f] transition"
-              >
-                Send Message
-              </button>
+              
             </div>
           </div>
           </section>        

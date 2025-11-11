@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import logo from "../../public/Assets/main_logo_b.png";
-import { FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaBars, FaTimes, FaLinkedin } from "react-icons/fa";
 import {motion, AnimatePresence} from "framer-motion";
 
 export default function Header() {
@@ -120,7 +120,7 @@ useEffect(() => {
         {headerState !== "default" && (
           <div className="hidden md:flex space-x-3 ml-6">
           <a
-            href="#"
+            href="https://www.facebook.com/share/17mmuUxosS/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-gray-700 text-white text-lg rounded-md hover:bg-red-800 transition-colors duration-300"
@@ -136,12 +136,12 @@ useEffect(() => {
             <FaTwitter />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/rangiri-holdings/?originalSubdomain=lk"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-gray-700 text-white text-lg rounded-md hover:bg-red-800 transition-colors duration-300"
           >
-            <FaInstagram />
+            <FaLinkedin />
           </a>
         </div>
 
@@ -203,7 +203,7 @@ useEffect(() => {
               rel="noopener noreferrer"
               className="p-2 bg-gray-700 text-white text-lg rounded-md hover:bg-red-800 transition-colors duration-300"
             >
-              <FaInstagram />
+              <FaLinkedin />
             </a>
           </div>
         </div>

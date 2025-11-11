@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/Assets/main_logo.png";
-import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -50,7 +50,7 @@ export default function Footer() {
         {/* Social Media */}
         <div className="text-lg hidden md:block">
           <h1 className="text-2xl font-bold mb-6">Social Media</h1>
-          <a href="#" className="flex items-center gap-5 mb-3 hover:text-orange-400 transition duration-500">
+          <a href="https://www.facebook.com/share/17mmuUxosS/" className="flex items-center gap-5 mb-3 hover:text-orange-400 transition duration-500">
             <FaFacebook />
             <p>Facebook</p>
           </a>
@@ -58,9 +58,9 @@ export default function Footer() {
             <FaTwitter />
             <p>Twitter</p>
           </a>
-          <a href="#" className="flex items-center gap-5 hover:text-orange-400 transition duration-500">
-            <FaInstagram />
-            <p>Instagram</p>
+          <a href="https://www.linkedin.com/company/rangiri-holdings/?originalSubdomain=lk" className="flex items-center gap-5 hover:text-orange-400 transition duration-500">
+            <FaLinkedin />
+            <p>LinkedIn</p>
           </a>
         </div>
       </div>
