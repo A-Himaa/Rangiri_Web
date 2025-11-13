@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/Assets/main_logo.png";
+import logo from "../../public/Assets/main_logo.webp";
 import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="relative w-full bg-black text-white">
-      <div className="absolute inset-0 bg-[url('/Assets/footer_bg_s.jpg')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 bg-[url('/Assets/footer_bg_s.webp')] bg-cover bg-center"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-amber-950 via-orange-950 to-black opacity-70"></div>
 
       {/* Content */}

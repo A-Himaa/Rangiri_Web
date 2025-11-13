@@ -2,28 +2,28 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import sec1img from "../../../public/Assets/companies/company_bg.jpg";
-import sec2img from "../../../public/Assets/home_sec4_bg.jpg";
-import logo from "../../../public/Assets/main_logo.png";
-import stretchTec from "../../../public/Assets/companies/stretchTec.png";
-import rangiriAqua from "../../../public/Assets/companies/rangiriAqua.png";
-import synergy from "../../../public/Assets/companies/synergy.png";
-import rmit from "../../../public/Assets/companies/rmit.png";
-import livinco from "../../../public/Assets/companies/livinco.png";
-import pulse from "../../../public/Assets/companies/pulse.png";
-import drugmart from "../../../public/Assets/companies/drugMart.png";
-import nishu from "../../../public/Assets/companies/nishu.png";
+import sec1img from "../../../public/Assets/companies/company_bg.webp";
+import sec2img from "../../../public/Assets/home_sec4_bg.webp";
+import logo from "../../../public/Assets/main_logo.webp";
+import stretchTec from "../../../public/Assets/companies/stretchTec.webp";
+import rangiriAqua from "../../../public/Assets/companies/rangiriAqua.webp";
+import synergy from "../../../public/Assets/companies/synergy.webp";
+import rmit from "../../../public/Assets/companies/rmit.webp";
+import livinco from "../../../public/Assets/companies/livinco.webp";
+import pulse from "../../../public/Assets/companies/pulse.webp";
+import drugmart from "../../../public/Assets/companies/drugMart.webp";
+import nishu from "../../../public/Assets/companies/nishu.webp";
 
 
 const logos = [
-  "/Assets/logos/StretchTec_logo.png",
-  "/Assets/logos/RangiriAqua_logo.png",
-  "/Assets/csr/synergy_logo.png",
-  "/Assets/logos/RMIT_logo.png",
-  "/Assets/logos/livinco_logo.png",
-  "/Assets/logos/PulseTV_logo.png",
-  "/Assets/logos/drugmart.jpg",
-  "/Assets/logos/Nishu_logo.png",
+  "/Assets/logos/StretchTec_logo.webp",
+  "/Assets/logos/RangiriAqua_logo.webp",
+  "/Assets/csr/synergy_logo.webp",
+  "/Assets/logos/RMIT_logo.webp",
+  "/Assets/logos/livinco_logo.webp",
+  "/Assets/logos/PulseTV_logo.webp",
+  "/Assets/logos/drugmart.webp",
+  "/Assets/logos/Nishu_logo.webp",
 ];
 
 

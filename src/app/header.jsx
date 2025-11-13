@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import logo from "../../public/Assets/main_logo_b.png";
+import logo from "../../public/Assets/main_logo_b.webp";
 import { FaFacebookF, FaTwitter, FaBars, FaTimes, FaLinkedin } from "react-icons/fa";
 import {motion, AnimatePresence} from "framer-motion";
 

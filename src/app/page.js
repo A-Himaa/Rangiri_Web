@@ -4,23 +4,23 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import logo from "../../public/Assets/main_logo.png";
-import sec2image from "../../public/Assets/home_sec2_bg.jpg";
-import sec3image from "../../public/Assets/home_sec3_bg.png";
-import sec4image from "../../public/Assets/home_sec4_bg.jpg";
-import sec5image from "../../public/Assets/home_bg_sec5.png";
-import apparel from "../../public/Assets/Cards1/apparel.jpeg";
-import leisure from "../../public/Assets/Cards1/leisure.jpg";
-import learning from "../../public/Assets/Cards1/learning.jpg";
-import living from "../../public/Assets/Cards2/livinco.jpg";
-import media from "../../public/Assets/Cards1/media.jpg";
-import health from "../../public/Assets/Cards1/health.jpg";
-import st from "../../public/Assets/Cards2/stretchTec.jpg";
-import ra from "../../public/Assets/Cards2/rangiriAqua.jpg";
-import sh from "../../public/Assets/Cards2/synergy.jpeg";
-import pl from "../../public/Assets/Cards2/pulse.png";
-import lv from "../../public/Assets/Cards2/livinco.jpg";
-import dm from "../../public/Assets/Cards2/drugMart.jpg";
+import logo from "../../public/Assets/main_logo.webp";
+import sec2image from "../../public/Assets/home_sec2_bg.webp";
+import sec3image from "../../public/Assets/home_sec3_bg.webp";
+import sec4image from "../../public/Assets/home_sec4_bg.webp";
+import sec5image from "../../public/Assets/home_bg_sec5.webp";
+import apparel from "../../public/Assets/Cards1/apparel.webp";
+import leisure from "../../public/Assets/Cards1/leisure.webp";
+import learning from "../../public/Assets/Cards1/learning.webp";
+import living from "../../public/Assets/Cards2/livinco.webp";
+import media from "../../public/Assets/Cards1/media.webp";
+import health from "../../public/Assets/Cards1/health.webp";
+import st from "../../public/Assets/Cards2/stretchTec.webp";
+import ra from "../../public/Assets/Cards2/rangiriAqua.webp";
+import sh from "../../public/Assets/Cards2/synergy.webp";
+import pl from "../../public/Assets/Cards2/pulse.webp";
+import lv from "../../public/Assets/Cards2/livinco.webp";
+import dm from "../../public/Assets/Cards2/drugMart.webp";
 import icon1 from "../../public/Assets/sustainability.png";
 import icon2 from "../../public/Assets/social-justice.png";
 import icon3 from "../../public/Assets/eco-world.png";
@@ -129,7 +129,7 @@ export default function Home() {
           {/* FIRST SECTION */}
           <main className="relative h-[20vh] md:min-h-screen overflow-hidden">
           <div
-            className="absolute inset-0 bg-[url('/Assets/home_bg_n.jpg')] bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-[url('/Assets/home_bg_n.webp')] bg-cover bg-center bg-no-repeat"
             style={{transform: `translateY(${offsetY * 0.4}px)`,}}></div>
 
           <div className="absolute inset-0 bg-black/20"></div>

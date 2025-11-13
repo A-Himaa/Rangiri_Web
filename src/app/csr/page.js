@@ -2,17 +2,17 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import sec1img from "../../../public/Assets/csr/csr_bg.jpg";
-import sec2img from "../../../public/Assets/home_sec4_bg.jpg";
-import synergylogo from "../../../public/Assets/csr/synergy_logo.png";
-import visionImg from "../../../public/Assets/csr/vision.jpg";
-import missionImg from "../../../public/Assets/csr/mission.jpg";
-import g1 from "../../../public/Assets/csr/gallery1.jpg";
-import g2 from "../../../public/Assets/csr/gallery2.jpg";
-import g3 from "../../../public/Assets/csr/gallery3.jpg";
-import g4 from "../../../public/Assets/csr/gallery4.jpg";
-import g5 from "../../../public/Assets/csr/gallery5.jpg";
-import g6 from "../../../public/Assets/csr/gallery6.jpg";
+import sec1img from "../../../public/Assets/csr/csr_bg.webp";
+import sec2img from "../../../public/Assets/home_sec4_bg.webp";
+import synergylogo from "../../../public/Assets/csr/synergy_logo.webp";
+import visionImg from "../../../public/Assets/csr/vision.webp";
+import missionImg from "../../../public/Assets/csr/mission.webp";
+import g1 from "../../../public/Assets/csr/gallery1.webp";
+import g2 from "../../../public/Assets/csr/gallery2.webp";
+import g3 from "../../../public/Assets/csr/gallery3.webp";
+import g4 from "../../../public/Assets/csr/gallery4.webp";
+import g5 from "../../../public/Assets/csr/gallery5.webp";
+import g6 from "../../../public/Assets/csr/gallery6.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

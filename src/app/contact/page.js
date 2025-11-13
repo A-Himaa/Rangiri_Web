@@ -1,11 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import sec1img from "../../../public/Assets/contact/contact_bg.jpg";
-import sec2img from "../../../public/Assets/home_sec4_bg.jpg";
+import sec2img from "../../../public/Assets/home_sec4_bg.webp";
 
 export default function ContactUs() {
     const [loading, setLoading] = useState(true);
@@ -70,12 +69,12 @@ export default function ContactUs() {
 
               <form
                 className="md:space-y-7"
-                action="https://formsubmit.co/akilahimaja"
+                action="https://formsubmit.co/cfc07be5d155ad8c58b975f6a7dfcf52"
                 method="POST"
               >
                 {/* Hidden Fields */}
-                <input type="hidden" name="_replyto" value="akilahimaja@hotmail.com" />
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+                {/* <input type="hidden" name="_replyto" value="akilahimaja@hotmail.com" /> */}
+                {/* <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" /> */}
                 <input type="hidden" name="_captcha" value="false" />
 
                 <div>

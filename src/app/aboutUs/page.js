@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "../../../public/Assets/main_logo_b.png";
-import sec1img from "../../../public/Assets/aboutUs/aboutus_bg.jpg";
-import sec2img from "../../../public/Assets/home_sec4_bg.jpg";
-import sec3img from "../../../public/Assets/aboutUs/aboutus_bg_2.jpg";
+import logo from "../../../public/Assets/main_logo_b.webp";
+import sec1img from "../../../public/Assets/aboutUs/aboutus_bg.webp";
+import sec2img from "../../../public/Assets/home_sec4_bg.webp";
+import sec3img from "../../../public/Assets/aboutUs/aboutus_bg_2.webp";
 import missionIcon from "../../../public/Assets/aboutUs/mission.png";
 import visionIcon from "../../../public/Assets/aboutUs/visions.png";
 import peopleIcon from "../../../public/Assets/aboutUs/people.png";
