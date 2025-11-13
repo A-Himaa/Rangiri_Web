@@ -1,18 +1,68 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import sec1img from "../../../public/Assets/contact/contact_bg.jpg";
+import sec1img from "../../../public/Assets/contact/contact_bg.webp";
 import sec2img from "../../../public/Assets/home_sec4_bg.webp";
 
 export default function ContactUs() {
     const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+
   
     useEffect(() => {
       const timer = setTimeout(() => setLoading(false), 2000);
       return () => clearTimeout(timer);
     }, []);
+
+    const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    setIsLoading(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("https://formsubmit.co/info@rangiriholdings.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      setIsLoading(false);
+
+      if (res.ok) {
+        Swal.fire({
+          title: "Inquiry Sent Successfully!",
+          text: "Thank you for reaching out to Rangiri Holdings.Your inquiry has been successfully submitted. Our team will review your message and get back to you shortly.",
+          icon: "success",
+          confirmButtonColor: "#7b3f2f",
+          background: "#fffaf5",
+        });
+        form.reset();
+      } else {
+        Swal.fire({
+          title: "Inquiry Failed!",
+          text: "We’re sorry, but your inquiry could not be sent at the moment. Please try again later or contact us directly via our official channels.",
+          icon: "error",
+          confirmButtonColor: "#7b3f2f",
+          background: "#fffaf5",
+        });
+      }
+      } catch (error) {
+        setIsLoading(false);
+        Swal.fire({
+          title: "Connection Error!",
+          text: "It seems there was a network issue while sending your inquiry. Please check your internet connection and try again.",
+          icon: "error",
+          confirmButtonColor: "#7b3f2f",
+          background: "#fffaf5",
+        });
+      }
+  };
+
+  
   return (
     <>
     {/* ======= Loading Screen ======= */}
@@ -67,40 +117,33 @@ export default function ContactUs() {
                 personalized responses to your messages.
               </p>
 
-              <form
-                className="md:space-y-7"
-                action="https://formsubmit.co/cfc07be5d155ad8c58b975f6a7dfcf52"
-                method="POST"
-              >
+              <form className="md:space-y-7" onSubmit={handleSubmit}>
                 {/* Hidden Fields */}
-                {/* <input type="hidden" name="_replyto" value="akilahimaja@hotmail.com" /> */}
-                {/* <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" /> */}
                 <input type="hidden" name="_captcha" value="false" />
 
+                {/* Name */}
                 <div>
                   <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                    First Name:
+                    Name :
                   </label>
                   <input
                     type="text"
                     name="First Name"
+                    placeholder="Enter Your Name"
                     className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
                     required
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      if (/^[A-Za-z\s]*$/.test(value)) {
+                        e.target.value = value;
+                      } else {
+                        e.target.value = value.replace(/[^A-Za-z\s]/g, "");
+                      }
+                    }}
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                    Last Name:
-                  </label>
-                  <input
-                    type="text"
-                    name="Last Name"
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
-                    required
-                  />
-                </div>
-
+                {/* Email */}
                 <div>
                   <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
                     Email:
@@ -108,28 +151,37 @@ export default function ContactUs() {
                   <input
                     type="email"
                     name="Email"
+                    placeholder="Enter Your Email"
                     className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-amber-700"
                     required
                   />
                 </div>
 
+                {/* Message */}
                 <div>
                   <label className="block text-sm md:text-xl font-bold text-gray-700 mb-3">
-                    Message:
+                    Inquiry:
                   </label>
                   <textarea
                     name="Message"
+                    placeholder="Type Your Inquiry"
                     rows="4"
                     className="w-full border border-gray-300 rounded-md px-4 py-2 resize-none focus:outline-none focus:ring-1 focus:ring-amber-700"
                     required
                   ></textarea>
                 </div>
 
+                {/* Button */}
                 <button
                   type="submit"
-                  className="bg-[#7b3f2f] text-white font-semibold px-8 py-2 mb-5 md:py-3 rounded-md hover:bg-[#5a2c1f] transition"
+                  disabled={isLoading}
+                  className={`bg-[#7b3f2f] text-white font-semibold px-8 py-2 mb-5 md:py-3 rounded-md transition ${
+                    isLoading
+                      ? "opacity-70 cursor-not-allowed"
+                      : "hover:bg-[#5a2c1f]"
+                  }`}
                 >
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </button>
               </form>
 
