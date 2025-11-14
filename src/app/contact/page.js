@@ -44,7 +44,7 @@ export default function ContactUs() {
       } else {
         Swal.fire({
           title: "Inquiry Failed!",
-          text: "We’re sorry, but your inquiry could not be sent at the moment. Please try again later or contact us directly via our official channels.",
+          text: "We're sorry, but your inquiry could not be sent at the moment. Please try again later or contact us directly via our official channels.",
           icon: "error",
           confirmButtonColor: "#7b3f2f",
           background: "#fffaf5",

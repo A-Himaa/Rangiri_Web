@@ -97,21 +97,7 @@ export default function Companies() {
 
                   <div>
                     <p className="text-sm md:text-base leading-relaxed md:leading-loose tracking-wide text-gray-800 text-justify md:mb-5">
-                      The name “Rangiri” has grown to represent trust, progress, and
-                      shared purpose across Sri Lanka—touching lives beyond boundaries.
-                      More than a business, we have become a symbol of opportunity,
-                      creating livelihoods, empowering communities, and inspiring hope
-                      for those striving for a brighter tomorrow. Our journey is not
-                      only about building enterprises but about building people,
-                      nurturing dreams, and contributing to the nation’s growth in
-                      every step we take. Over the years, Rangiri has become a beacon of
-                      resilience and unity, guiding countless individuals toward
-                      self-reliance and success. From empowering local entrepreneurs to
-                      uplifting rural communities through sustainable initiatives, every
-                      endeavor reflects our belief that true progress lies in collective
-                      advancement. With innovation as our compass and integrity as our
-                      foundation, we continue to move forward—shaping a legacy where
-                      prosperity and purpose walk hand in hand.
+                      {"The name “Rangiri” has grown to represent trust, progress, and shared purpose across Sri Lanka—touching lives beyond boundaries. More than a business, we have become a symbol of opportunity, creating livelihoods, empowering communities, and inspiring hope for those striving for a brighter tomorrow. Our journey is not only about building enterprises but about building people, nurturing dreams, and contributing to the nation's growth in every step we take. Over the years, Rangiri has become a beacon of resilience and unity, guiding countless individuals toward self-reliance and success. From empowering local entrepreneurs to uplifting rural communities through sustainable initiatives, every endeavor reflects our belief that true progress lies in collective advancement. With innovation as our compass and integrity as our foundation, we continue to move forward—shaping a legacy where prosperity and purpose walk hand in hand."}
                     </p>
                   </div>
                 </div>
@@ -255,14 +241,7 @@ export default function Companies() {
                   Livinco International (Pvt) Ltd
                 </h2>
                 <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
-                  Livinco International (Pvt) Ltd was founded in 2010 and incorporated on 28 October 
-                  2010 with the vision of building and selling houses in the open property market. 
-                  Over time, the company shifted its focus from small residential units to commercial 
-                  developments. Notable projects include the Rangiri Resort Hotel and Spa, twelve 
-                  residential apartments at Bird Park, Pitakotte, and two three-storey buildings in Makola 
-                  serving as the company headquarters. Though not heavily promoted through mass media, 
-                  Livinco has consistently remained active, delivering residential projects tailored to 
-                  customers’ lifestyles.
+                  {"Livinco International (Pvt) Ltd was founded in 2010 and incorporated on 28 October 2010 with the vision of building and selling houses in the open property market. Over time, the company shifted its focus from small residential units to commercial developments. Notable projects include the Rangiri Resort Hotel and Spa, twelve residential apartments at Bird Park, Pitakotte, and two three-storey buildings in Makola serving as the company headquarters. Though not heavily promoted through mass media, Livinco has consistently remained active, delivering residential projects tailored to customers' lifestyles."}
                 </p>
                 </div>
               </div>
@@ -275,10 +254,7 @@ export default function Companies() {
                   Pulse Media TV Channel
                 </h2>
                 <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
-                  Pulse Media TV Channel is dedicated to reflecting the people’s voice by building a 
-                  knowledgeable and resilient community capable of thriving through challenges. Through 
-                  its special projects, the channel focuses on programs that empower and strengthen the legal 
-                  framework of society.
+                  {"Pulse Media TV Channel is dedicated to reflecting the people's voice by building a knowledgeable and resilient community capable of thriving through challenges. Through its special projects, the channel focuses on programs that empower and strengthen the legal framework of society."}
 
                 </p>
               </div>
@@ -310,10 +286,7 @@ export default function Companies() {
                   Drug Mart
                 </h2>
                 <p className="text-gray-700 text-xs md:text-base leading-relaxed text-justify">
-                  Our Pharmaceutical Chain supplies high-quality pharmaceutical and consumer products, 
-                  offering drugs, groceries, and perishables under one roof through a unique ‘Farm to Plate’ 
-                  concept. Special projects include conducting awareness sessions to promote protection against 
-                  non-infectious diseases, delivered through BS Pharma & Grocery Marts and four Drug Mart locations.
+                  {"Our Pharmaceutical Chain supplies high-quality pharmaceutical and consumer products, offering drugs, groceries, and perishables under one roof through a unique ‘Farm to Plate' concept. Special projects include conducting awareness sessions to promote protection against non-infectious diseases, delivered through BS Pharma & Grocery Marts and four Drug Mart locations."}
                 </p>
                 </div>
               </div>

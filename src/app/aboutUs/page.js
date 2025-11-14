@@ -13,7 +13,7 @@ import integrityIcon from "../../../public/Assets/aboutUs/integrity.png";
 import sustainabilityIcon from "../../../public/Assets/aboutUs/sustainability.png";
 import growthIcon from "../../../public/Assets/aboutUs/growth.png";
 
-export default function aboutUs() {
+export default function AboutUs() {
   const [loading, setLoading] = useState(true);
   
     useEffect(() => {

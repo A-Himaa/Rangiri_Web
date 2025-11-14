@@ -172,7 +172,7 @@ export default function Home() {
                 whileInView={{opacity: 1, y: 0}}
                 transition={{delay:0.5, duration: 1, ease: "easeOut"}}
                 viewport={{once: true, amount: 0.2}}>
-                  LET'S WORK TOGETHER
+                  {"LET'S WORK TOGETHER"}
               </motion.p>
       
               <motion.h1 
@@ -209,7 +209,7 @@ export default function Home() {
           {/* Left content */}
           <div className="px-6 pt-5 md:p-15 flex items-center">
             <p className="text-gray-600 font-bold text-2xl md:text-3xl leading-wide">
-              The Mission can't be claimed as a single loop. It's a collaboration of many loops.
+              {"The Mission can't be claimed as a single loop. It's a collaboration of many loops."}
             </p>
           </div>
 
@@ -262,16 +262,16 @@ export default function Home() {
               viewport={{ once: true, amount: 0.4 }}
             >
               <p className="text-xs md:text-base text-justify pt-5 text-gray-500">
-                The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka’s corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment.
+                {"The spark that ignited Rangiri Holdings was not just ambition—it was a vision rooted in community, innovation, and resilience. Founded by Mr. Nihal Pathirage, whose leadership qualities were evident even in his school days, Rangiri Holdings emerged as a dynamic force in Sri Lanka's corporate landscape. What began as a modest entrepreneurial endeavor has evolved into a multifaceted conglomerate, driven by a deep commitment to national progress and social upliftment."}
               </p>
               <p className="text-xs md:text-base text-justify pt-2 text-gray-500">
                 From its early steps in apparel and accessories manufacturing to its expansion into housing, construction, security services, education, and leisure, Rangiri Holdings has never been content with the ordinary. Each venture reflects a synergy of heart and soul, blending business acumen with a humanistic approach that values diversity, discipline, and development.
               </p>
               <p className="hidden md:block text-xs md:text-base text-justify pt-2 text-gray-500">
-                Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka’s economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise.
+                {"Today, Rangiri Holdings stands tall as a cluster of thriving entities—each one contributing to the broader mission of empowering communities and elevating Sri Lanka's economic stature. Whether through the vibrant energy of Action Park, the precision of Nishu Creations, or the transformative work of Livinco International, Rangiri continues to redefine what it means to be a modern Sri Lankan enterprise."}
               </p>
               <p className="text-xs md:text-base text-justify pt-2 text-gray-500">
-                With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it’s a movement. A movement toward excellence, inclusivity, and sustainable growth.
+                {"With a future-focused mindset and a legacy built on integrity, Rangiri Holdings is not just a business—it's a movement. A movement toward excellence, inclusivity, and sustainable growth."}
               </p>
             </motion.div>
           </div>
@@ -490,7 +490,7 @@ export default function Home() {
             <div className="relative bg-stone-100 rounded-4xl shadow-2xl overflow-hidden">
             <div className="p-8 md:p-15 flex items-center">
               <p className="text-gray-500 font-bold text-sm md:text-xl text-center tracking-wide">
-                By 2030, our mission  is to design and carry out road maps that support Rangiri Holdings' objective of expanding its business portfolio while protecting sustainability and national interests
+                {"By 2030, our mission  is to design and carry out road maps that support Rangiri Holdings' objective of expanding its business portfolio while protecting sustainability and national interests"}
               </p>
             </div>
             </div>
