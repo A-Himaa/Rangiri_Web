@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rangiri Holdings Website
 
-## Getting Started
+A modern, responsive, and fast corporate website for **Rangiri Holdings**, built using **Next.js**, **Tailwind CSS**, and **Framer Motion** for animations. The website showcases the company’s services, projects, CSR initiatives, and contact information in a visually appealing and interactive manner.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The Rangiri Holdings website project aims to provide a **corporate presence online** with the following goals:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Showcase **company profile and services**
+- Highlight **CSR (Corporate Social Responsibility) initiatives**
+- Display **latest projects and achievements**
+- Enable **user inquiries via contact forms**
+- Provide a **responsive, mobile-friendly experience**  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Fully **responsive layout** for desktop, tablet, and mobile
+- **Dynamic pages** for Home, Companies, About Us, CSR, and Contact
+- Smooth **animations** using Framer Motion
+- Interactive **contact form** with validation
+- SEO-friendly **metadata and structured content**
+- Optimized for **fast loading** with Tailwind CSS and WebP images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- **Next.js 15** – React framework for server-side rendering & static generation  
+- **Tailwind CSS** – Utility-first CSS framework  
+- **Framer Motion** – Animation library for React  
+- **React Icons** – For scalable SVG icons  
+- **WebP Images** – Optimized images for fast loading  
+- **Netlify** – For deployment and hosting (testing/demo purposes)
+- **SweetAlert2** – For customized alerts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
